@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Css Assignment 1 Page - 5</title>
+        <style>
+            p{
+                text-align: center;
+                font-size: 24px;
+            }
+            #header{
+                display: grid;
+                grid-template-columns: 20% 80%;
+                border: 2px solid black;
+            }
+            aside, div{
+                border: 1px solid black;
+            }
+            #headerbar{
+                border: 2px solid black;
+                margin-bottom: 20px;
+            }
+
+            footer{
+                border: 2px solid black;
+            }
+            #container{
+                display: grid;
+                grid-template-columns: 30% 40% 30%;
+                border: 2px solid black;
+                height: 450px;
+                margin-bottom: 20px;
+            }
+            #containerrow{
+                display: grid;
+                grid-template-rows: auto auto auto;
+            }
+            #containerrow aside p{
+                padding-top: 30px;
+            }
+            #containercol{
+                display: grid;
+                grid-template-columns: auto auto;
+
+            }
+            #containercol div p{
+                padding-top: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section id="header">
+            <aside>
+                <p> Header logo </p>
+            </aside>
+            <div>
+                <p> Header Barrier </p>
+            </div>
+        </section>
+
+        <section id="headerbar">
+            <p> Header Bar </p>
+        </section>
+
+        <section id="container">
+            <aside> <p> Left Block </p></aside>
+
+            <div id="containerrow">
+                <aside> <p> Center Center Blocks </p></aside>
+                <div id="containercol">
+                    <aside> <p> Center-Left Blocks </p></aside>
+                    <div> <p> Center Right Blocks </p></div>
+                </div>
+
+                <aside> <p> Module Comments </p></aside>
+
+            </div>
+
+            <aside> <p> Right Block </p></aside>
+        </section>
+
+        <footer>
+            <p> Footer Bar </p>
+        </footer>
+    </body>
+</html>

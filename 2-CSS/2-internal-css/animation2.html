@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{ margin:0px; }
+
+            @keyframes changephoto {
+                25%{ background-image:url('2.jpg'); }
+                50%{ background-image:url('3.jpg'); }
+                75%{ background-image:url('4.jpg'); }
+            }
+
+            #banner{
+                padding:150px 0px 150px;
+                font-size:130px;
+                text-align:center;
+                height:150px;
+                background-image:url('1.jpg');
+                background-size:100% 100%;
+                color:yellow;
+                text-shadow:15px 15px 5px red;
+                animation:changephoto;
+                animation-duration:10s;
+                animation-iteration-count:infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="banner"> CSS Animation </section>
+    </body>
+</html>

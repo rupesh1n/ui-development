@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Assignment Set 5 page 1</title>
+        <style>
+            body{ 
+                margin: 0px;
+                background-color: lightgray;
+            }
+            h1{
+                padding: 10px;
+                text-align: center;
+            }
+            #container{
+                width: 60%;
+                display: grid;
+                grid-template-columns: auto auto;
+                padding: 20px 250px 20px;
+            }
+           
+            .row{
+                height: 50px;
+            }
+            .biginput{
+                 height: 200px;
+                 width: 300px;
+            }
+            .smallinput{
+                 height: 28px;
+                 width: 300px;
+            }
+            
+
+            #right{
+                background-color: white;
+                margin-top: 65px;
+                padding: 50px  0px 50px;
+                box-shadow: 0px 0px 20px black;
+                border-radius: 5px;
+                text-align: center;
+                height: 300px;
+                
+            }
+            .center{
+                text-align: center;
+            }
+            button{
+                margin-top: 170px;
+                background-color: rgb(82, 79, 79);
+                border: none;
+                color: white;
+                width:80px;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            #coloumn{
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+            #coloumn div{
+                padding: 10px;
+            }
+            p, label{
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Get in Touch with our experts </h1>
+        
+        <section id="container">
+            <aside id=" left">
+                <h2 class="center"> Write Us </h2>
+                <div class="row">
+                    <input type="text" placeholder="Full Name *" class="smallinput"/>
+                </div>
+                <div class="row">
+                    <input type="email" placeholder="Email *" class="smallinput"/>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Company *" class="smallinput"/>
+                </div>
+                <div class="row">
+                    <label> Are you an existing customer? *</label>
+                </div>
+                <div class="row">
+                    <label> Yes</label> <input type="radio" name="yes" value="Y"/>
+                    <label>  No </label> <input type="radio" name="no" value="N"/>
+                </div>
+                <div class="row">
+                    <textarea class="biginput" placeholder="Your Message Here ..."></textarea>
+                </div>
+                <div class="center">
+                    <button> Send </button>
+                </div>
+
+            </aside>
+            <section id="right">
+                <h2> Meet our experts</h2>
+                <p> Live support available for 6am-5pm Mon-Fri</p>
+                <div id="coloumn">
+                    <div>
+                        <img src="../Assignment2/profile-picture.jpeg">
+                        <p>
+                            Expert Name 
+                        </p>
+                        <p> and Experience</p>
+                    </div>
+                    <div>
+                        <img src="../Assignment2/profile-picture.jpeg">
+                        <p>
+                            Expert Name 
+                        </p>
+                        <p> and Experience</p>
+                    </div>
+                    <div>
+                        <img src="../Assignment2/profile-picture.jpeg">
+                        <p>
+                            Expert Name 
+                        </p>
+                        <p> and Experience</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Css Assignment - 1 page - 1 </title>
+        <style>
+            body{margin: 0px;}
+            #header{
+                background-color: darkcyan;
+                height: 140px;
+                margin-bottom: 10px;
+            }
+            
+            p{
+                text-align: center;
+                font-size: 30px;
+                color: white;
+            }
+            #header p{
+                padding: 50px;
+            }
+
+            #container{
+                display: grid;
+                grid-template-columns: 30% 70% ;
+            }
+
+            aside, div{
+                background-color: darkcyan;
+                height: 450px;
+            }
+            div{
+                margin-left: 10px;
+            }
+            div p, aside p {
+                padding-top: 150px;
+            }
+            
+            footer{
+                background-color: darkcyan;
+                height: 100px;
+            }
+            footer p {
+                padding: 35px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="header">
+            <p> Header</p>
+        </section>
+        <section id="container">
+            <aside>
+                <p> Sidebar </p>
+            </aside>
+            <div>
+                <p> Content</p>
+            </div>
+
+        </section>
+        <footer>
+            <p> Footer </p>
+        </footer>
+    </body>
+</html>

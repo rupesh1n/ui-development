@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS one-page-application</title>
+        <style>
+            body{margin:0px; }
+
+            html{scroll-behavior: smooth; }
+
+            section{
+                padding: 40px 0px 150px;
+                min-height: 700px;
+                text-align: center;
+                width: 80%;
+                margin: auto;
+            }
+
+            h1{font-size: 100px;
+                margin: 30px;
+            }
+
+            ul{
+                background-color: black;
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+                position:sticky;
+                top:0px;
+            }
+            li{
+                display:inline-block;
+                padding: 17px 40px 17px;
+            }
+            a{
+                font-size: 25px;
+                color: yellow;
+                text-decoration: none;
+            }
+            li:hover{
+                background-color: darkred;
+                cursor: pointer;
+            }
+            footer{
+                background-color: green;
+                padding: 10px;
+                font-size: 18px;
+                text-align: center;
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+                color: white;
+            }
+            #aboutpic{
+                width: 350px;
+                height: 250px;
+                margin: 40px;
+                float: left;
+            }
+            #about p{
+                margin-top: 60px;
+            }
+
+            #service p{
+                padding: 30px;
+                margin: 20px;
+                font-size: 35px;
+                color: blue;
+                display: inline-block;
+                box-shadow: 10px 10px 10px gray;
+            }
+            .product{
+                margin: 2%;
+                width: 20%;
+                height: 300px;
+                box-shadow: 10px 10px 10px black;
+            }
+            .customer{
+                margin: 2%;
+                width: 20%;
+                
+                box-shadow: 10px 10px 10px gray;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li> <a href="#home"> Home </a> </li>
+            <li> <a href="#about"> About Us </a> </li>
+            <li> <a href="#service"> Our Services </a> </li>
+            <li> <a href="#product"> Our Product </a> </li>
+            <li> <a href="#customer"> Our Customer </a> </li>
+        </ul>
+
+        <section id="home">
+            <h1> Welcome Home </h1>
+            <p> asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+            </p>
+        </section>
+
+        <section id="about">
+            <h1> About Us </h1>
+            <img src="1.jpeg" id="aboutpic"/>
+            <p> asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+                asdad dsdfd f dfsfdsf  dsfds f refre rfdgre r g gg r feefef
+            </p>
+        </section>
+
+        <section id="service">
+            <h1> Our Services </h1>
+            <p> Website Design </p>
+            <p> Logo Design </p>
+            <p> App Design </p>
+            <p> Digital Marketing </p>
+            <p> Content Writing </p>
+            <p> Branding </p>
+            <p> Payroll </p>
+        </section>
+
+        <section id="product">
+            <h1> Our Product </h1>
+            <img src="1.jpeg" class="product"/> 
+            <img src="1.jpeg" class="product"/> 
+            <img src="1.jpeg" class="product"/> 
+            <img src="1.jpeg" class="product"/> 
+        </section>
+
+        <section id="customer">
+            <h1> Our Customer </h1>
+            <img src="logo.png" class="customer"/> 
+            <img src="lucuLogo.png" class="customer"/> 
+        </section>
+
+        <footer>
+            <p> Help Center - 8884166608 </p>
+        </footer>
+
+    </body>
+</html>

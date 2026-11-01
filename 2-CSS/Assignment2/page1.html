@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CSS Assignment -2 page 1</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #header,
+        #navigation,
+        footer,
+        #container aside,
+        #containerrow div {
+            border: 2px solid black;
+            margin-bottom: 5px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            height: 450px;
+        }
+
+        #containerrow {
+            display: grid;
+            grid-template-rows: auto auto;
+
+        }
+
+        div {
+            margin-right: 5px;
+        }
+
+        aside p {
+            padding-top: 200px;
+        }
+
+        div p {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <p> &lt;header&gt;</p>
+    </section>
+
+    <section id="navigation">
+        <p> &lt;nav&gt; </p>
+    </section>
+
+    <section id="container">
+        <div id="containerrow">
+            <div>
+                <p> &lt;section&gt;</p>
+            </div>
+            <div>
+                <p> &lt;article&gt;</p>
+            </div>
+        </div>
+        <aside>
+            <p> &lt;aside&gt; </p>
+        </aside>
+    </section>
+
+    <footer>
+        <p> &lt;footer&gt; </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Css Assignment set - 2  Page - 2</title>
+        <style>
+            body{
+                border: 2px solid black;
+                padding: 10px;
+            }
+            p{
+                text-align: center;
+            }
+            #header{
+                border: 2px solid blue;
+                margin-bottom: 20px;
+            }
+            #container{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                height: 450px;
+
+            }
+            #containerrow{
+                display: grid;
+                grid-template-rows: 30% 70%;
+            }
+            #containercol{
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+            #container aside {
+                border: 2px solid blue;
+                margin-right: 5px;
+            }
+            #containerrow aside {
+                border: 2px solid blue;
+                
+            }
+            #containercol div{
+                border: 2px solid blue;
+                margin-right: 5px;
+                margin-top: 5px;
+            }
+            #containercol aside{
+                margin-top: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section id="header">
+            <p> THIS IS A HEADER </p>
+        </section>
+
+        <section id="container">
+            <aside> <p> MENU <br/> * * * * * * * * <br/> * * * * * * * * <br/> * * * * * * * * <br/> * * * * * * * * <br/> </p> </aside>
+            <div id="containerrow">
+                <aside> <p> SOME TEXT </p></aside>
+                <div id="containercol">
+                    <aside>  <p> AN IMAGE </p> </aside>
+                    <div>  <p> MORE TEXT </p> </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

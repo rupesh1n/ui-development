@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Assignment - 4 page - 6</title>
+        <style>
+            body{ background-color: pink;}
+            p{
+                text-align: center;
+                color: white;
+                font-size: 22px;
+            }
+            header{
+                padding: 5px;
+                background-color: skyblue;
+                margin-bottom: 10px;
+            }
+            #container{
+                display: grid;
+                grid-template-columns: 20% 80%;
+                min-height: 500px;
+            }
+            aside{
+                background-color: skyblue;
+                margin-right: 10px;
+            }
+            aside p{
+                padding-top: 200px;
+            }
+            #containerrow{
+                display: grid;
+                grid-template-rows: auto auto;
+                background-color: #b9606e;
+                
+            }
+            #containercol{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                margin: 5px;
+               
+            }
+            #containerrow p {
+                padding-top: 200px;
+            }
+            #containercol p {
+                background-color: skyblue;opacity:0.5;
+                margin: 5px;
+                padding-top: 60px;
+            }
+            footer{
+                margin-top: 10px;
+                padding: 5px;
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <p> Header </p>
+        </header>
+
+        <section id="container">
+            <aside>
+                <p> Aside </p>
+            </aside>
+            <div id="containerrow">
+                <p> Article </p>
+                <div id="containercol">
+                    <p> Image </p>
+                    <p>Image </p>
+                    <p>Image </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p> Footer</p>
+        </footer>
+    </body>
+</html>

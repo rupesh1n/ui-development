@@ -1,0 +1,175 @@
+
+CSS - Cascading Style Sheet
+      ->it has collections of only property and values.
+      ->the css property and values use to change look and feel of webpage.
+      ->The is 4 types 
+         1. inline css 
+         2. internal css 
+         3. external css 
+         4. import css 
+
+    Syntax in inline css 
+        <tagname style="property:value; property2:value; property3:value;"> Contents </tagname>
+    
+    Example 
+        <p style="color:red; height:300px; width:400px; background:blue;"> Bangalore </p>
+
+    About inline CSS
+        -> it is one to one - write css code 1 time and use in html only 1 time.
+        -> due to 1 to 1 code duplicate will happen
+        -> duplicate code will make file as heavy
+        -> heavy file take more time to load and user experience may be bad.
+        -> code modification take long time because code is duplicate
+
+    About Internal css?
+        -> it is 1 to many - write css code 1 time and use in html many time.
+        ->css has given following way to write 1 to many css.
+            1. tag selector
+                ->Example
+                    h3{
+                        color: yellow;
+                        font-size: 40px;
+                        float:left;
+                        width:33%;
+                    }
+            2. group selector
+                ->Example
+                    h1, h3, p, div{
+                    font-style: italic;
+                }
+            3. id selector
+                ->Example
+                    #three{
+                        background: blue;
+                        color: white;
+                        padding: 30px;
+                        font-size: 30px;
+                        text-align: center;
+                        margin: 2%;
+                    }
+            4. class selector
+                ->Example
+                    .two{
+                        margin: 2%;
+                        height: 200px;
+                        width: 21%;
+                        background-color: blue;
+                        color:white;
+                        float: left;
+                    }
+            5. parent child selector
+                ->Example
+                    #xyz p{
+                        margin: 2%;
+                        float: left;
+                        height: 200px;
+                        width: 21%;
+                        background-color: purple;
+                    }
+            6. attribute selector
+                ->example
+                    input[type="text"]{
+                        height: 30px;
+                        width:300px;
+                        margin: 30px;
+                    }
+            -----------------------------------------------------------
+    List of property
+        height: 3 type
+            height : 100px; - it is fixed for 100px only 
+            min-height : 100px; - the min height is fixed for 100px but if contents is more it will 
+            increase automatically
+            height : auto; it take height based on contents
+
+        width: 4 type
+            width:px - it is fixed
+            width:% - it wll fit in all size of screen
+            min-width:px - it use to set min width
+            max-width:px - it use to set maximum width
+            
+        background: 9 type 
+            background:red;
+            background-color:red;
+            background-color:rgb(100, 200, 150); // 0-255  (range)
+            background-color:rgba(100, 200, 150, 0.5); // a range 0.1 to 1
+            background-image:url(1.jpg);
+            background-image:linear-gradient(red, blue);
+            background-image:linear-gradient(to left, red, blue);
+            background-image:linear-gradient(to right, red, blue);
+            background-image:linear-gradient(to top, red, blue);
+
+        float: it convert from block level tag to inline 
+               float:left; it print from left to right 
+               float:right; it print right to left 
+        margin - it use to apply space outside of tag 
+            margin:auto; - it print in center 
+            margin:40px; - it apply 40px gap from all side 
+            margin-top:40px; - it apply 40px gap from top side
+            margin-bottom:40px; - it apply 40px gap from bottom side 
+            margin-left:40px; - it apply 40px gap from left side 
+            margin-right:40px; - it apply 40px gap from right side 
+
+        padding - it apply space inside the tag 
+            padding:30px; it apply 30px gap from all side 
+            padding-top:30px; it apply 30px gap from top side 
+            padding-left:30px; it apply 30px gap from left side
+            padding-right:30px; it apply 30px gap from right side 
+            padding-bottom:30px; it apply 30px gap from bottom side
+        
+        border
+            border: 20px solid red;
+        type of border
+            solid
+            dotted
+            dashed
+            double
+            inset
+            outset
+            ridge
+            groove
+-----------------------------------------------------------
+ 
+    box-shadow
+        box-shadow:from-left from-top density color
+-----------------------------------------------------------
+    display:none - it hide the tag
+    display:inline - it print in same line but height and width do not work
+    diaplay:inline-block - it print in same line height and width will work
+    display:block; - it print new line
+    display:grid
+    diaplay:flex;
+-----------------------------------------------------------
+    position:static;
+    position:fixed;
+    position:sticky;
+    position:relative;
+    position:absolute;
+-----------------------------------------------------------
+    overflow:auto  - It apply scroll on x and y both
+    overflow-x:auto - It show the horizontzl scroller,    overflow-x:hidden - It hide the horizontzl scroller
+    overflow-y:auto - It show the vertical scroller,      overflow-y:hidden - It hide the vertical scroller
+-----------------------------------------------------------
+    Animation
+        ex:
+            @keyframes changephoto {
+                25%{background-image: url('2.jpg');}
+                50%{background-image: url('3.jpg');}
+                75%{background-image: url('4.jpg');}
+            }
+
+            #banner{
+                padding: 150px 0px 150px;
+                font-size: 130px;
+                text-align: center;
+                height: 150px;
+                background-image: url('1.jpeg');
+                background-size: 100% 100%;
+                color: yellow;
+                text-shadow: 15px 15px 5px red;
+                animation: changephoto;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+-----------------------------------------------------------
+
+-----------------------------------------------------------

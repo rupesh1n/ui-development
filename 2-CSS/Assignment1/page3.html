@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Assignment -1 page 3</title>
+        <style>
+          p{
+            text-align: center;
+            font-size: 24px;
+          }
+          #header, #navigation, footer, #container aside, #container div{
+            border: 1px solid black;
+          }
+          #container{
+                display: grid;
+                grid-template-columns:20% 80%;
+                height: 500px;
+          }
+          aside p {
+            padding-top:200px;
+          }
+          div p {
+            padding-top:200px;
+          }
+        </style>
+    </head>
+    <body>
+        <section id="header">
+            <p> Header Section </p>
+        </section>
+
+        <section id="navigation">
+            <p> Navigation Bar </p>
+        </section>
+
+        <section id="container">
+            <aside>
+                <p> Index </p>
+            </aside>
+
+            <div>
+                <p> Content section</p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p> Footer Section</p>
+        </footer>
+        
+    </body>
+</html>

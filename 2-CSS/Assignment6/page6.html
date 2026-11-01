@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../3-external-css/icon/css/all.css"/>
+        <style>
+            body{
+                margin: 0px;
+                background-color: #34b1e7;
+            }
+            #container{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                width: 70%;
+                min-height: 450px;
+                padding: 80px;
+                margin: auto;
+            }
+            aside{
+                background-color: white;
+                margin-right: 80px;
+                padding: 40px;
+                text-align: center;
+            }
+            
+
+            #right{
+                background-color: white;
+                margin-left: 50px;
+                padding: 40px;
+                text-align: center;
+            }
+            .row{
+                padding: 15px;
+            }
+            .row button{
+                padding: 10px;
+                width: 49%;
+
+            }
+            .white{
+                background-color: white;
+                border: 1px solid #34b1e7
+            }
+            .blue{
+                background-color: #34b1e7;
+                color: white;
+                border: none;
+            }
+            input{
+                width: 95%;
+                height: 40px;
+                border: 1px solid #34b1e7;
+                border-radius: 10px;
+                padding: 5px;
+            }
+            .center button{
+                width: 95%;
+                background-color: #389ef0;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+            .facebook{
+                background-color: #3d92d5;
+                color: white;
+                border: none;
+                width: 45% !important;
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+            .google{
+                background-color: #d5803d;
+                color: white;
+                border: none;
+                width: 45% !important;
+                border-radius: 5px;
+            }
+            
+           
+        </style>
+    </head>
+    <body>
+        <section id="container">
+            <aside>
+                <div class="row">
+                    <button type="button" class="white"> SIGN IN </button>
+                    <button type="button" class="blue"> SIGN UP </button>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="facebook"> <i class="fa-brands fa-facebook-f"></i></button>
+                    <button type="button" class="google"> <i class="fa-brands fa-google"></i> </button>
+                </div>
+
+                <div class="row">
+                    <input type="email" placeholder=" E-mail" /> 
+                </div>
+
+                <div class="row">
+                    <input type="password" placeholder="Password" /> 
+                </div>
+
+                <div class="center">
+                    <button type="button" > SIGN IN</button>
+                </div>
+                
+            </aside>
+            <section id="right">
+
+                <div class="row">
+                    <button type="button" class="blue"> SIGN IN </button>
+                    <button type="button" class="white"> SIGN UP </button>
+                </div>
+
+
+                <div class="row">
+                    <input type="text" placeholder="Username" /> 
+                </div>
+
+                <div class="row">
+                    <input type="email" placeholder="E-mail" /> 
+                </div>
+
+                <div class="row">
+                    <input type="password" placeholder="Password" /> 
+                </div>
+
+                <div class="center">
+                    <button type="button"> SIGN UP</button>
+                </div>
+                
+               
+            </section>
+            
+
+        </section>
+    </body>
+</html>

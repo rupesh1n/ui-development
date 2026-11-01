@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                color:blue;
+                font-size:100px;
+                text-align:center;
+            }
+
+            #container{
+                width:90%;
+                margin:auto;
+                display:grid;
+                grid-template-columns: auto auto auto auto;
+            }
+
+            div{
+                font-size:25px;
+                margin:40px 30px 40px;
+            }
+
+            @media screen and (min-width:1px) and (max-width:600px){
+                h1{ font-size:40px; color:red; }
+                #container{ grid-template-columns: auto; }
+            }
+
+            @media screen and (min-width:600px) and (max-width:900px){
+                h1{ font-size:50px; color:green; }
+                #container{ grid-template-columns: auto auto; }
+                div{ font-size:20px; }
+            }
+
+            @media screen and (min-width:900px) and (max-width:1200px){
+                h1{ font-size:65px; color:purple; }
+                #container{ grid-template-columns: auto auto auto; }
+                div{ font-size:20px; }
+            }
+
+            @media screen and (min-width:1200px) and (max-width:1400px){
+                h1{ font-size:70px; color:purple; }
+                div{ font-size:20px; }
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Media Query in CSS </h1>
+        <section id="container">
+            <div> Website Development 1</div>
+            <div> Webside Design </div>
+            <div> Website Development 2</div>
+            <div> Website Development 3</div>
+            <div> Website Development 4</div>
+            <div> Website Development 5</div>
+            <div> Website Development 6</div>
+            <div> Website Development 7</div>
+            <div> Website Development 8</div>
+            <div> Website Development 9</div>
+            <div> Website Development 10</div>
+            <div> Website Development 11</div>
+        </section>
+    </body>
+</html>

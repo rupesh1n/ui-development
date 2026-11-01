@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Assignment 3 page 3</title>
+        <style>
+            h1{
+                color: darkcyan;
+                text-align: center;
+            }
+            #parent{
+                display: grid;
+                grid-template-rows: auto auto;
+                width: 80%;
+                margin: 10px 150px 10px;
+            }
+            #col{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                border-bottom: 1px solid darkcyan;
+            }
+            img{
+                width: 180px;
+                height: 120px;
+            }
+            .red{color: brown;
+                font-size: 22px;
+            }
+            .cyan{color: darkcyan;
+                font-size: 22px;
+            }
+            .yellow{color: rgb(242, 207, 8);
+                font-size: 22px;
+                text-align: center;
+            }
+            .brown{
+                color: rgb(219, 5, 5);
+                font-size: 16px;
+            }
+            #table{
+                display: grid;
+                grid-template-rows: auto auto;
+                margin-bottom: 10px;
+                border: 1px solid lightgray; 
+            }
+            #innerrow{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                border-bottom: 1px solid lightgray;
+            }
+            #innerrow:last-child {
+                border-bottom: none
+            }
+            #innerrow div {
+                border-right: 1px solid lightgray;
+                padding: 10px;
+            }
+            #innerrow div:last-child {
+                border-right: none
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1> 23 - Available Cars </h1>
+        <section id="parent">
+            <section id="col">
+                    <div>
+                        <p class="red"> Toyota Camry </p>
+                        <p> Price : 289000</p>
+                        <p> Fuel : Petrol </p>
+                        <p> Version: XL </p>
+                    </div>
+                    <div>
+                        <p  class="cyan"> Sedan </p>
+                        <img src="../Assignment4/1.jpeg"/>
+                    </div>
+                    <div>
+                        <p class="yellow"> Service History </p>
+                        <section id="table">
+                            <section id="innerrow">
+                                <div>
+                                    <p class="brown"> Sl No</p>
+                                </div>
+                                <div>
+                                    <p class="brown"> Service Date  </p>
+                                </div>
+                                <div>
+                                    <p class="brown"> Service Cost </p>
+                                </div>
+
+                            </section>
+                            <section id="innerrow">
+                                <div>
+                                    <p> 1</p>
+                                </div>
+                                <div>
+                                    <p> 2024-08-01 </p>
+                                </div>
+                                <div>
+                                    <p> 2425 </p>
+                                </div>
+                            </section>
+                            <section id="innerrow">
+                                <div>
+                                    <p> 2 </p>
+                                </div>
+                                <div>
+                                    <p> 2017-06-07 </p>
+                                </div>
+                                <div>
+                                    <p> 1967 </p>
+                                </div>
+                                
+                            </section>
+
+                        </section>
+                        
+                    </div>
+
+            </section>
+
+                <section id="col">
+                    <div>
+                        <p class="red"> Toyota RAV4 </p>
+                        <p> Price : 289000 </p>
+                        <p> Fuel : Deisel/Electric </p>
+                        <p> Version: Hybrid </p>
+                    </div>
+                    <div>
+                        <p class="cyan"> Suv </p>
+                        <img src="../Assignment4/2.png"/>
+                    </div>
+                    <div>
+                        <p class="yellow"> Service History </p>
+                        <section id="table">
+                            <section id="innerrow">
+                                <div>
+                                    <p class="brown"> Sl No</p>
+                                </div>
+                                <div>
+                                    <p class="brown"> Service Date </p>
+                                </div>
+                                <div>
+                                    <p class="brown"> Service Cost </p>
+                                </div>
+
+                            </section>
+                            <section id="innerrow">
+                                <div>
+                                    <p> 1</p>
+                                </div>
+                                <div>
+                                    <p> 2024-08-01 </p>
+                                </div>
+                                <div>
+                                    <p> 2425 </p>
+                                </div>
+                            </section>
+                            <section id="innerrow">
+                                <div>
+                                    <p> 2 </p>
+                                </div>
+                                <div>
+                                    <p> 2017-06-07 </p>
+                                </div>
+                                <div>
+                                    <p> 1967 </p>
+                                </div>
+                                
+                            </section>
+
+                        </section>
+                        
+                    </div>
+
+                </section>
+
+        </section>
+
+    </body>
+</html>

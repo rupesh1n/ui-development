@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Assignment - 3 page - 1 </title>
+        <link rel="stylesheet" href="../icon/css/all.css"/>
+        <style>
+            #container p{
+                text-align: center;
+                color: rgb(80, 124, 205);
+                font-size: 22px;
+            }
+            #container{
+                width:80%;
+                margin:auto;
+                min-height: 450px;
+            }
+            #ourservice{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+            .service{
+                margin: 4%;
+                padding: 10px;
+                width: 240px;
+                height: 80px;
+                text-align: center;
+                background-color: #e6e6e6;
+            }
+            .blue{ color: blue;}
+            .lowerblue{color: rgb(80, 124, 205);}
+            .light{color: skyblue;}
+            .green{ color: green;}
+            .brown{color: brown;}
+            .darkblue{ color:darkblue;}
+            .purple{ color: purple;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+        <p> Dashboard </p>
+
+        <div id="ourservice">
+
+            <div class="service">
+                <i class="fa fa-plus fa-2x purple"></i>
+                <p class="purple"> Admission </p>
+            </div>
+            <div class="service">
+                <i class="fa fa-square-check blue"></i>
+                <p class="blue"> Payment </p>
+            </div>
+            <div class="service">
+                <i class="fa fa-pencil fa-2x green"></i>
+                <p class="green"> Examination </p>
+            </div>
+            <div class="service">
+                <i class="fa fa-star-of-life fa-2x brown"></i>
+                <p class="brown"> Activity </p>
+            </div>
+            <div class="service">
+                <i class="fa fa-road fa-2x lowerblue"></i>
+                <p class="lowerblue"> Transport </p>
+            </div>
+            <div class="service">
+                <i class="fa fa-user fa-2x light"></i>
+                <p class="light"> Employee </p>
+            </div>
+            <div class="service">
+                <i class="fa fa-briefcase fa-2x darkblue"></i>
+                <p class="darkblue"> Finance </p>
+            </div>
+            <div class="service">
+                <i class="fa fa-gear fa-2x purple"></i>
+                <p class="purple"> App Settings </p>
+            </div>
+
+        </div>
+
+    </div>
+    </body>
+</html>

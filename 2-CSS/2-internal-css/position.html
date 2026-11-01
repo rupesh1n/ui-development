@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Position</title>
+        <style>
+            body{margin: 0px;
+            min-height: 2000px;
+            }
+
+            header{
+                padding: 20px;
+                background-color: blue;
+                font-size: 30px;
+                color: white;
+                text-align: center;
+                position: sticky;
+                top: 0px;
+            }
+
+            footer{
+                padding: 20px;
+                background-color: black;
+                font-size: 30px;
+                color: white;
+                text-align: center;
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+            }
+
+            .service{
+                font-size: 40px;
+                margin: 30px;
+                padding:50px;
+                color: orange;
+                display: inline-block;
+                position: relative;
+                border: 2px solid green;
+                background: skyblue;
+                transition: background 2s, border-radius 1s;
+                cursor: pointer;
+            }
+            .service:hover{
+                background:darkcyan;
+                border-radius: 50%;
+                border: 10px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <header> This is header </header>
+
+        <p class="service"> Website Design </p>
+        <p class="service"> Logo Design </p>
+        <p class="service"> App Design </p>
+        <p class="service"> Digital Marketing </p>
+        <p class="service"> Content Writing </p>
+        <p class="service"> Branding </p>
+        <p class="service"> Payroll </p>
+
+        <footer> This is footer </footer>
+    </body>
+</html>

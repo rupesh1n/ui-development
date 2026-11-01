@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS Group Selector</title>
+        <style>
+            body{ margin: 0px; }
+            ul{
+                margin: 0px;
+                background: blue;
+                top: 0px;
+                position: sticky;
+            }
+            li{
+                color: white;
+                font-size: 22px;
+                display:inline-block;
+                padding: 18px 40px 18px;
+            }
+
+            li:hover{
+                cursor: pointer;
+                background-color: darkcyan;
+            }
+            #active{
+                background-color: darkcyan;
+            }
+            #product{
+                background-color: darkcyan;
+                padding: 50px;
+                display:grid;
+                grid-template-columns: auto auto auto auto;
+                
+            }
+            #product div{
+                text-align: center;
+                font-size: 35px;
+                margin: 30px;
+                padding: 50px  0px 50px;
+                background: white;
+                box-shadow: 0px 0px 30px white;
+                border-radius: 5px;
+            }
+            #product div:hover{
+                box-shadow: 0px 0px 30px red;
+                cursor: pointer;
+            }
+
+            #container{
+                width: 80%;
+                margin: auto;
+                display: grid;
+                grid-template-columns:20% 60% 20%;
+                padding: 35px;
+                
+            } 
+
+            aside{
+                padding: 20px;
+                box-shadow: 0px 0px 5px gray;
+                border-radius: 10px;
+            }
+
+            #service{
+                padding: 10px;
+                margin: 10px 30px 10px;
+
+            }
+
+            h1{
+                text-align: center;
+                margin-top: 0px;
+                font-size: 50px;
+                color: red;
+            }
+            aside p{
+                color: darkblue;
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            aside p:hover{
+                color: red;
+                text-decoration: underline;
+            }
+            footer{
+                padding: 30px;
+                height: 100px;
+                background-color: chocolate;
+                color: white;
+                text-align: center;
+                border-top: 20px solid green;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li> Home </li>
+            <li> About Us </li>
+            <li> Contact Us </li>
+            <li id="active"> Our Services </li>
+            <li> Our Client </li>
+            <li> Our Project </li>
+        </ul>
+
+        <section id="product">
+            <div> Apple </div>
+            <div> Mango </div>
+            <div> Orange </div>
+            <div> Banana </div>
+        </section>
+
+        <section id="container">
+            <aside>
+                <p> Website Design </p>
+                <p> Logo Design </p>
+                <p> Cintent Writing </p>
+                <p> Digital Marketing </p>
+                <p> Other Services </p>
+            </aside>
+
+            <div id="service">
+                <h1> Our Services </h1>
+                <p>
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                </p>
+                <p>
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                    sgsgg sff dsffddd ds d ds ds  ds d d    eweefjjj jhjhggg
+                </p>
+            </div>
+            <aside>
+                <marquee direction="down" height="100%">
+                    The Recent Updates... asd sadad ddasddd  df d 
+                    sdfdsf dsf ds ds f ds f df ds f df  ree  fdsg
+                </marquee>
+            </aside>
+        </section>
+        <footer>
+            <p>
+                Copyright@Company Name All Rights Reserved
+            </p>
+        </footer>
+    </body>
+</html>

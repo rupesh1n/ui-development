@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{ background-color: #f8f8f8;}
+            #container{
+                display: grid;
+                grid-template-columns: 25% 75%;
+                margin-left: 40px;
+                
+            }
+            ul{
+                padding: 0px;
+                border: 1px solid lightgray;
+                border-radius: 8px;
+                list-style-type: none;
+            }
+            li{
+                padding: 15px;
+                border-bottom: 1px solid lightgray;
+                
+            }
+            ul li:last-child {
+                border-bottom: none
+            }
+            .title{
+                background-color: rgba(27, 62, 237, 0.897);
+                color: white;
+                border-radius: 8px 8px 0px 0px;
+            }
+            #right{
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+            img{
+                width: 250px;
+                height: 200px;
+                padding: 4px;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+            }
+            div{
+                background-color: white;
+                margin: 20px;
+                text-align: center;
+            }
+            p{
+                color: red;
+            }
+            h1{
+                color: rgb(48, 186, 240);
+                margin-left: 20px;
+                font-size: 22px;
+            }
+        </style>
+    </head>
+    <body>
+      
+        <section id="container">
+            <aside>
+                <ul>
+                    <li class="title">Shopping Category </li>
+                    <li> <a href="abc.html"> in Mobile Category</a> </li>
+                    <li> <a href="abc.html"> in Computer Category</a> </li>
+                    <li> <a href="abc.html"> in Dress Category</a> </li>
+                    <li> <a href="abc.html"> in Book Category</a> </li>
+                </ul>
+            </aside>
+            
+            <section>
+                <h1> Available Products</h1>
+            <section id="right">
+                
+                <div>
+                    <h3> Java</h3>
+                    <img src="../Assignment2/1.jpg"/>
+                    <p> Rs. 200</p>
+                </div>
+                <div>
+                    <h3> Nodejs</h3>
+                    <img src="../Assignment2/2.jpg"/>
+                    <p> Rs. 300</p>
+                </div>
+                <div>
+                    <h3> Python</h3>
+                    <img src="../Assignment2/3.jpg"/>
+                    <p> Rs. 500</p>
+                </div>
+            </section>
+        </section>
+        
+        </section>
+    </body>
+</html>

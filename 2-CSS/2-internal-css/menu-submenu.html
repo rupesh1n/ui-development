@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{ margin:0px; }
+
+            #mainmenu{
+                background-color:black;
+                margin:0px;
+            }
+
+            #mainmenu li{
+                display:inline-block;
+                padding:20px 40px 20px;
+                color:white;
+                cursor:pointer;
+                font-size:20px;
+            }
+
+            .submenu{
+                background-color:blue !important;
+                position:absolute;
+                display:none;
+            }
+
+            .submenu li{
+                display:block !important;
+            }
+
+            #mainmenu li:hover .submenu{
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="mainmenu">
+            <li> Home </li>
+            <li> About Us </li>
+            <li> Our Services 
+                <ul class="submenu">
+                    <li> Logo Design </li>
+                    <li> App Design </li>
+                    <li> Website Design </li>
+                </ul>
+            </li>
+            <li> Contact Us </li>
+            <li> Our Branches 
+                <ul class="submenu">
+                    <li> Bangalore </li>
+                    <li> Mumbai </li>
+                    <li> Chennai </li>
+                </ul>
+            </li>
+            <li> Technologies </li>
+        </ul>
+    </body>
+</html>

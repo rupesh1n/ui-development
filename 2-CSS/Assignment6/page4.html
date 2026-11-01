@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin-top: 50px;
+                background-color: #ebeef3;
+            }
+            #container{
+                width: 70%;
+                margin: auto;
+                display: grid;
+                grid-template-columns: auto auto;
+                background-color: white;
+                min-height: 500px;
+            }
+            .triangle {
+                width:500px;
+                aspect-ratio: 1;
+                clip-path: polygon(0 0,100% 0,0 100%);
+                background: linear-gradient(45deg,#44c9f6,#44c9f6);
+                padding: 30px;
+                }
+            .right{
+                padding: 40px 50px 40px;
+                margin-left: -80px;
+            }.blue{
+                color: white;
+                background-color: #44c9f6;
+                border: 1px solid white;
+                width: 120px;
+                padding: 10px;
+                border-radius: 20px;
+                font-size: 20px;
+            }
+            .white{
+                font-size: 46px;
+                color: white;
+                margin-top: 30px;
+            }
+            p{ 
+                color: white;
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+
+            .row{
+                height:60px;
+                display: grid;
+                grid-template-rows:auto auto;
+                margin-bottom: 30px;
+                text-align: left;
+            }
+            .black{
+                font-size: 40px;
+                color: #686868;
+            }
+            label{
+                color: #7b7b7b;
+                padding: 10px;
+                font-size:18px;
+            }
+            .button2{
+                color: rgb(14, 208, 208);
+                background-color: white;
+                border: 1px solid rgb(14, 208, 208);
+                width: 380px;
+                padding: 6px;
+                border-radius: 20px;
+                margin-top: 10px;
+                font-size: 20px;
+            }
+            a{
+                color: rgb(14, 208, 208);
+                font-size: 22px;
+                text-decoration: none;
+            }
+            input{
+                width: 350px;
+                border: 1px solid #ededed;
+                border-radius: 20px;
+                height: 30px;
+                padding: 10px;
+                color: #848484;
+            }
+            .row label::after{
+                content: "*";
+                color: red;
+            }
+           
+        </style>
+    </head>
+
+    <body>
+        <section id="container">
+            <div class="triangle">
+                <h1 class="white"> Welcome Back</h1>
+                <p> Create your account. <br/> It's totally free.</p>
+                <div> <button type="button" class="blue">Sign Up</button></div>
+           </div>
+           <div class="right">
+                <h1 class="black"> Login </h1>
+
+                <div class="row">
+                    <label> Username or email adress </label>
+                    <input type="text" class="smallinput" placeholder="Username or Email"/>
+                </div>
+                <div class="row">
+                    <label> Password </label>
+                    <input type="password" class="smallinput" placeholder="Password"/>
+                </div>
+                <div class="row">
+                    <button type="button" class="button2">Sign In</button>
+                </div>
+                <a href="forgat.html" > Forget password?</a>
+
+           </div>
+           
+         </section>
+    </body>
+</html>
