@@ -1,0 +1,123 @@
+How to Setup react project
+    create folder as react
+    from terminal run
+        1. npm install -g create-react-app
+
+        2. npx create-react-app project1
+How to start react development server
+    -> Open cmd in project folder
+    -> run the command
+          npm start
+    Inside that directory, you can run several commands:
+
+      npm start
+        Starts the development server.
+
+      npm run build
+        Bundles the app into static files for production.
+
+      npm test
+        Starts the test runner.
+
+      npm run eject
+        Removes this tool and copies build dependencies, configuration files
+        and scripts into the app directory. If you do this, you can’t go back!
+
+    We suggest that you begin by typing:
+
+      cd project1
+      npm start
+
+      Note that the development build is not optimized.
+    To create a production build, use npm run build.
+--------------------------------------------------------------------------------
+    Component in React ?
+      -> The React Component is just like function in javascript. but it come in 2 type
+        -> class Component - It is based on class - Not in use now a days
+        -> functional Component - It is based on function - comes with react hooks
+--------------------------------------------------------------------------------
+  JSX - Javascript and XML (javascript + html + xml rules)
+
+--------------------------------------------------------------------------------
+  JSX Element - All the html tags + user defined tags are called jsx element in react
+
+--------------------------------------------------------------------------------
+  JSX Rules  (how to write react code)
+  -> if inside a Component more than 1 jsx element are required then keep inside parent jsx element.
+     example
+      <div>
+        <h1> Welcome To React </h1>
+        <p> This is from p tag </p>
+        <p> dfs dfscvcg ccdf ghjj jjkiiuuy</p>
+      </div>
+
+  -> The parent or child jsx element can be user defined tag also
+    example
+      <abc>
+        <h1> Welcome To React </h1>
+        <p> This is from p tag </p>
+        <xyz> dfs dfscvcg ccdf ghjj jjkiiuuy</xyz>
+      </abc>
+
+  -> The parent or child jsx element can be <> </> tag also
+    example
+      <>
+        <h1> Welcome To React </h1>
+        <p> This is from p tag </p>
+        <p> dfs dfscvcg ccdf ghjj jjkiiuuy</p>
+      </>
+
+   ->  The parent jsx element can be array [] also
+      example
+        [
+          <h1> Welcome To React </h1>,
+          <p> This is from p tag </p>,
+          <p> empty tag added </p>
+        ]
+
+--------------------------------------------------------------------------------
+For navigation install
+npm install react-router-dom
+
+--------------------------------------------------------------------------------
+try to clear the npm cache with:
+npm cache clean --force
+  then remove all node_modules folders from the application
+  remove the package-lock.json file from the application
+  Install packages again by using the command npm install
+  then start the application using npm start
+--------------------------------------------------------------------------------
+  Home work 
+	1. setup new project as project2 - npx create-react-app project2
+	2. create these components 
+		->company.js 
+		->item.js 
+		->employee.js 
+		->customer.js 
+		->city.js 
+		
+	3. implement single dimensional array in 
+		company.js 
+		city.js 
+	4. implement array of object in 
+		employee.js 
+		customer.js 
+		item.js 
+	5. install react router dom 
+		npm install react-router-dom 
+		
+	6. setup routing for all above pages 
+	7. create clean navbar
+	8. onclick on link respective component should load
+--------------------------------------------------------------------------------
+Jsonapi
+npm install -g json-server
+json-server --watch data.json --port 1234
+
+--------------------------------------------------------------------------------
+npm install bootstrap
+npm install redux
+npm install react-redux
+npm install react-paginate //pagination
+--------------------------------------------------------------------------------
+npm run build

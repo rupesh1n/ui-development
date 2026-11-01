@@ -1,0 +1,45 @@
+{
+  "bookapi": [
+    {
+      "id": "1",
+      "bookname": "HTML",
+      "price": "2000",
+      "qty": "10"
+    },
+    {
+      "bookname": "C",
+      "price": "100",
+      "qty": "9",
+      "id": "47a2"
+    }
+  ],
+  "userapi": [
+    {
+      "id": "1",
+      "fullname": "Ganesh",
+      "mobile": "888787878",
+      "edu": "MCA"
+    },
+    {
+      "id": "59f7",
+      "fullname": "Mukesh",
+      "mobile": "9084562341",
+      "edu": "BCA"
+    },
+    {
+      "id": "77a0",
+      "fullname": "Ramesh",
+      "mobile": "978645612",
+      "edu": "BBA"
+    }
+  ],
+  "productapi": [
+    {
+      "id": "1",
+      "pname": "Apple Red",
+      "cost": "500",
+      "seller": "Alex",
+      "stock": "Yes"
+    }
+  ]
+}
