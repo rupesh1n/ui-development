@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1{
+  color: blue;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+
+section{
+  width: 80%;
+  margin: auto;
+  min-height:400px;
+}
+
+header{
+  padding:18px;
+  background-color: darkblue;
+
+}
+.toplink{
+  color: yellow;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.toplink:hover{
+  border-bottom: 2px dotted white;
+  color: orange;
+  cursor: pointer;
+}
+.homepic{
+  margin: 2%;
+  width:20.6%;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px gray;
+}
+.four{
+  display: inline-block;
+  margin: 2%;
+  width: 20%;
+  font-size: 25px;
+}
+#datagrid{
+  margin: auto;
+  border-collapse: collapse;
+}
+#datagrid tr, #datagrid th, #datagrid td{
+  padding: 10px 50px 10px;
+  border: 0.5px solid skyblue;
+}
+th{
+  color: orangered;
+}
+
+legend{
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  padding: 4px 15px 4px;
+  border-radius: 5px;
+}
+
+fieldset{
+  margin: 2%;
+  padding: 20px 30px 20px;
+  display: inline-block;
+  border: 2px dashed orange;
+  border-radius: 10px;
+  vertical-align: top;
+}
+fieldset p{
+  margin-top: 5px;
+}
