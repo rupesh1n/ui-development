@@ -1,0 +1,205 @@
+bootstrap is library of css. (Its code is css code)
+it has collections of pre-defined css classes. 
+bootstrap library is designed to create responsive webpage.
+bootstrap came in market in 2011 by twitter.
+
+
+according to bootstrap "grid system" all the devices are 6 type based on screen width.
+
+1. extra small  - 1px to 576px
+2. small        - 576px to 768px
+3. medium       - 768px to 992px
+4. large        - 992px to 1200px
+5. extra large  - 1200px to 1400px
+6. extra extra large - > 1400px
+
+The grid system has given 12 css pre-defined classes for each category
+    1. extra small  - 1px to 576px
+        .col-1
+        .col-2
+        .col-3
+        .col-4
+        .col-5
+        .col-6
+        .col-7
+        .col-8
+        .col-9
+        .col-10
+        .col-11
+        .col-12
+
+    2. small        - 576px to 768px
+        .col-sm-1
+        .col-sm-2
+        .col-sm-3
+        .col-sm-4
+        .col-sm-5
+        .col-sm-6
+        .col-sm-7
+        .col-sm-8
+        .col-sm-9
+        .col-sm-10
+        .col-sm-11
+        .col-sm-12
+
+    3. medium       - 768px to 992px
+        .col-md-1
+        .col-md-2
+        .col-md-3
+        .col-md-4
+        .col-md-5
+        .col-md-6
+        .col-md-7
+        .col-md-8
+        .col-md-9
+        .col-md-10
+        .col-md-11
+        .col-md-12
+
+    4. large        - 992px to 1200px
+        .col-lg-1
+        .col-lg-2
+        .col-lg-3
+        .col-lg-4
+        .col-lg-5
+        .col-lg-6
+        .col-lg-7
+        .col-lg-8
+        .col-lg-9
+        .col-lg-10
+        .col-lg-11
+        .col-lg-12
+
+    5. extra large  - 1200px to 1400px
+        .col-xl-1
+        .col-xl-2
+        .col-xl-3
+        .col-xl-4
+        .col-xl-5
+        .col-xl-6
+        .col-xl-7
+        .col-xl-8
+        .col-xl-9
+        .col-xl-10
+        .col-xl-11
+        .col-xl-12
+
+    6. extra extra large - > 1400px
+        .col-xxl-1
+        .col-xxl-2
+        .col-xxl-3
+        .col-xxl-4
+        .col-xxl-5
+        .col-xxl-6
+        .col-xxl-7
+        .col-xxl-8
+        .col-xxl-9
+        .col-xxl-10
+        .col-xxl-11
+        .col-xxl-12
+
+======= 72 classes in grid system =========
+    whenever create a webpage using bootstrap, follow these steps
+        1. link to bootstrap.css file in head section
+        2. use body tag. inside body use div, section, etc tag with classes
+            .container  -  it has margin/ gap from left and right
+            .container-fluid - it cover full width
+        
+        3. inside container OR container-fluid, use the class
+            .row
+        
+        4. inside row use columns from given 72.
+-------------------------------------------------------------------------
+    Classes for margin and padding
+        1 - 4px
+        2 - 8px
+        3 - 16px
+        4 - 24px
+        5 - 48px
+
+        m - margin
+        p - padding
+        t - top
+        b - bottom
+        s - start(left)
+        e - e(right)
+
+    for margin
+        .m-1, .m-2, .m-3, .m-4, .m-5
+        .ms-1, .ms-2, .ms-3, .ms-4, .ms-5
+        .me-1, .me-2, .me-3, .me-4, .me-5
+        .mt-1, .mt-2, .mt-3, .mt-4, .mt-5
+        .mb-1, .mb-2, .mb-3, .mb-4, .mb-5
+
+    for padding
+        .p-1, .p-2, .p-3, .p-4, .p-5
+        .ps-1, .ps-2, .ps-3, .ps-4, .ps-5
+        .pe-1, .pe-2, .pe-3, .pe-4, .pe-5
+        .pt-1, .pt-2, .pt-3, .pt-4, .pt-5
+        .pb-1, .pb-2, .pb-3, .pb-4, .pb-5
+
+    classes for text color
+        .text-info  - skyblue
+        .text-primary - blue
+        .text-danger - red
+        .text-success - green
+        .text-warning - yellow
+        .text-white - white
+        .text-dark  - black
+
+    classes for bacground color
+        .bg-info  - skyblue
+        .bg-primary - blue
+        .bg-danger - red
+        .bg-success - green
+        .bg-warning - yellow
+        .bg-white - white
+        .bg-dark  - black
+
+    classes for radius
+        .rounded
+        .rounded-circle
+
+    classes for shadow
+        .shadow
+        .shadow-lg
+-----------------------------------------------------------------
+    classes for image
+        .img-fluid - it control width of photo
+        .img-thumbnail - it apply white color border with radius
+
+-----------------------------------------------------------------
+    classes for card
+        .card   
+            .card-header
+            .card-body    
+            .card-footer
+-----------------------------------------------------------------
+    classes for left navigation
+        .list-group
+            .list-group-item
+            .active
+-----------------------------------------------------------------
+    classes for table
+        .table
+            .table-bordered
+            .table-striped
+            .table-sm
+            .table-hover
+-----------------------------------------------------------------
+    classes for input tags.
+        .form-control  - use in (text, email, password, number, date, file, textarea)
+        .form-select - use in (select)
+    size of input elements
+        .form-control-sm
+        .form-control-lg
+-----------------------------------------------------------------
+    classes for button
+        .btn-info  - skyblue
+        .btn-primary - blue
+        .btn-danger - red
+        .btn-success - green
+        .btn-warning - yellow
+        .btn-white - white
+        .btn-dark  - black
+-----------------------------------------------------------------
