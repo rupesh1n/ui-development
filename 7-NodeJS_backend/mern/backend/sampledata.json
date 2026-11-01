@@ -1,0 +1,20 @@
+[
+    {
+        "fullname": "Alex",
+        "age": 20,
+        "edu": "bca",
+        "city": "banglore"
+    },
+    {
+        "fullname": "Punit",
+        "age": 25,
+        "edu": "mca",
+        "city": "Kolkata"
+    },
+    {
+        "fullname": "Rahul",
+        "age": 20,
+        "edu": "bca",
+        "city": "banglore"
+    }
+]

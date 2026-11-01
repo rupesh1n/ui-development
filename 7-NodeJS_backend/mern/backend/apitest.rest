@@ -1,0 +1,22 @@
+get http://localhost:1111/user
+
+
+###
+post http://localhost:1111/user
+Content-Type: application/json
+
+{
+    "name": "Ajit",
+    "email": "a@gmail.com",
+    "mobile": "7869095437",
+    "address": "Marathalli"
+}
+
+
+###
+get http://localhost:1111/user/67a89b24279b514bcab640fe
+
+
+
+###
+delete http://localhost:1111/user/67a89b24279b514bcab640fe

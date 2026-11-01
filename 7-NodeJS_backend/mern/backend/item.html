@@ -1,0 +1,42 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const getitem = () =>{
+            fetch("http://localhost:1111/booklist")
+            .then(response =>response.json() )
+            .then(itemArray =>{
+                let data = "<h1> Book List </h1>";
+                itemArray.map((name, index)=>{
+                    data = data + `<p> ${name} </p>`;
+                })
+                document.getElementById("container").innerHTML = data;
+            })
+        }
+
+        const getbook = () =>{
+            fetch("http://localhost:1111/itemlist")
+            .then(response =>response.json() )
+            .then(itemArray =>{
+                let data = "<h1> Item List </h1>";
+                itemArray.map((item, index)=>{
+                    data = data + `<p> ${item.pname} , ${item.cost}</p>`;
+                })
+                document.getElementById("container").innerHTML = data;
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <h1> Item List</h1>
+    <button onclick="getbook()"> Show Item</button>
+    <button onclick="getitem()"> Show Book</button>
+
+    <br/><br/>
+    <section id="container"> No Data </section>
+</body>
+</html>

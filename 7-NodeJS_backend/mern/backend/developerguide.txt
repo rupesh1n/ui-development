@@ -1,0 +1,74 @@
+npm install -g nodemon
+npm install express
+npm install body-parser 
+npm install cors
+npm install multer
+npm install mongoose
+npm install uuid
+----------------------------------------------------------
+run the file command
+    nodemon page1
+    nodemon mainserver
+----------------------------------------------------------
+Shift + 1 => shortcut to add Html tag.
+
+----------------------------------------------------------
+use this for express
+const express = require("express");  // calling express framework
+const app = express();          // creating object of express
+const cors = require("cors");  // calling cors origin library to allow data communication between 2 server
+app.use(cors());             // creating object of cors library
+app.use(express.json());   // injecting the json to handel json data communication
+----------------------------------------------------------
+React project
+npm install -g create-react-app
+npx create-react-app project1
+npm install web-vitals
+npm start
+----------------------------------------------------------
+Mongo DB details
+We are deploying Cluster12276...
+
+Store your database authentication access details in a secure location:
+Database User Username: Cluster12276
+Database User Password: alVjdEJRaVhz
+
+Creating your cluster... [It's safe to 'Ctrl + C']
+Cluster created.
+Your connection string: mongodb+srv://cluster12276.bo1a3.mongodb.net
+
+Loading sample data into your cluster... [It's safe to 'Ctrl + C']
+? How would you like to connect to your cluster? mongosh
+Current Mongosh Log ID:	679e121f74dc0b1d6acb7920
+Connecting to:		mongodb+srv://<credentials>@cluster12276.bo1a3.mongodb.net/?appName=mongosh+2.3.8
+Using MongoDB:		8.0.4
+Using Mongosh:		2.3.8
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+Atlas atlas-qn6g8b-shard-0 [primary] test> 
+
+----------------------------------------------------------
+
+brew -v 
+then
+
+brew tap mongodb/brew 
+brew install mongodb-community 
+sudo mkdir -p /System/Volumes/Data/data/db 
+sudo chown -R `id -un` /System/Volumes/Data/data/db 
+sudo mongod --dbpath /System/Volumes/Data/data/db 
+
+Then open another tab on terminal(command + t), and type
+
+mongosh
+
+mongo => mongo-db console
+mongodb => mongo-db server
+brew services start mongodb-community
+mongosh
+brew services stop mongodb-community
