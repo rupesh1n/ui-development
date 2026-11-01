@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> HTML Addignment - 5 - Page - 3</title>
+    <style>
+        a {
+            font-style: italic;
+        }
+        input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"]{
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="abc.py" method="post">
+        <table align="center" cellspacing="10" bgcolor="#87ceea" width="500px">
+            <caption>
+                <h1>User From One</h1>
+            </caption>
+            <tr>
+                <th> Full Name </th>
+                <td> <input type="text" placeholder="Enter Your Name" /> </td>
+            </tr>
+
+            <tr>
+                <th> Email Id </th>
+                <td> <input type="email" placeholder="Enter Your Email Id" /> </td>
+            </tr>
+
+            <tr>
+                <th> Password </th>
+                <td> <input type="password" placeholder="Enter Your New Password" /> </td>
+            </tr>
+            <tr>
+                <th> Mobile No. </th>
+                <td> <input type="number" placeholder="Enter Your Mobile No" /> </td>
+            </tr>
+            <tr>
+                <th> Gender </th>
+                <td>
+                    <input type="radio" name="gender" id="a" /> <label for="b"> Male</label>
+                    <input type="radio" name="gender" id="b" /> <label for="b"> Female</label>
+                </td>
+            </tr>
+
+            <tr>
+                <th> DOB</th>
+                <td> <input type="date" /> </td>
+            </tr>
+
+            <tr>
+                <th>City </th>
+                    <td>
+                        <select>
+                            <option> Choose City</option>
+                            <option> Kolkata </option>
+                            <option> Patna </option>
+                            <option> Banglore </option>
+                            <option> Other </option>
+                        </select>
+                    </td>
+            </tr>
+
+            <tr>
+                <th> Address </th>
+                <td> <textarea rows="6" cols="35" placeholder="Enter Your Full Address"></textarea> </td>
+            </tr>
+
+            <tr>
+                <th> Pincode </th>
+                <td> <input type="number" placeholder="Enter pincode" /> </td>
+            </tr>
+
+            <tr>
+                <th> Resume Upload </th>
+                <td> <input type="file"/> </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">  <input type="checkbox"/> I am agree with terms & conditions </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit"> Register </button>
+                    <button type="reset"> Clear Form </button>
+                    <hr color="#800000" />
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2"> <a href="abcd.html"> I have account</a></th>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>

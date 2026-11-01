@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form Example </title>
+    </head>
+    <body background="12.jpg">
+        <table align="center" cellpadding="15">
+            <tr>
+                <th> <a href="form1.html"> Contact Us </a> </th>
+                <th> <a href="form2.html"> Login </a> </th>
+                <th> <a href="form3.html"> Create Account </a> </th>
+                <th> <a href="project.html"> My Project </a> </th>
+            </tr>
+
+        </table>
+
+        <form action="usercheck.php" method="POST">
+            <table align="center" cellpadding="15" bgcolor="pink">
+                <caption>
+                    <h1> <font color="yellow"> User Login </font> </h1>
+                </caption>
+                <tr>
+                    <th> Your E-mail Id </th>
+                    <td> <input type="email" name="useremail"/> </td>
+                </tr>
+
+                <tr>
+                    <th> Your Password </th>
+                    <td> <input type="password" name="userpassword"/> </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <button type="submit"> Login </button>
+                        <button type="reset"> Reset </button>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

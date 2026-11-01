@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form Example </title>
+        <style>
+            a{
+                color:white;
+                font-size: 22px;
+                text-decoration: none;
+
+            }
+            table{ border: 20px solid wheat;}
+        </style>
+    </head>
+    <body bgcolor="#5a4s32">
+        <table align="center" cellpadding="15">
+            <tr>
+                <th> <a href="form1.html"> Contact Us </a> </th>
+                <th> <a href="form2.html"> Login </a> </th>
+                <th> <a href="form3.html"> Create Account </a> </th>
+                <th> <a href="project.html"> My Project </a> </th>
+            </tr>
+
+        </table>
+        <form action="saveuser.py" method="POST">
+            <table align="center" cellpadding="10" bgcolor="lightgreen" >
+                <caption> <h1 style="color:white;"> Create Account </h1></caption>
+                <tr>
+                    <th> First Name </th>
+                    <td> <input type="text" placeholder="enter your first name"/> </td>
+                    <th> Last Name </th>
+                    <td> <input type="text" placeholder="enter your last name"/> </td>
+                </tr>
+                <tr>
+                    <th> E-mail Id </th>
+                    <td> <input type="email" placeholder="enter your E-mail Id"/> </td>
+                
+                    <th> Mobile No </th>
+                    <td> <input type="number" placeholder="enter your mobile no."/> </td>
+                </tr>
+                <tr>
+                    <th> Password </th>
+                    <td> <input type="password" placeholder="enter your password"/> </td>
+                    <th> Confirm Password </th>
+                    <td> <input type="password" placeholder="Confirm your password"/> </td>
+                    
+                </tr>
+
+                <tr>
+                    <th> Gender </th>
+                    <td>
+                        <input type="radio" name="gender" id="a"/> <label for="b"> Male</label>
+                        <input type="radio" name="gender" id="b"/> <label for="b"> Female</label>
+                    </td>
+                    <th> Date of Birth</th>
+                    <td> <input type="date"/> </td>
+                </tr>
+
+                <tr>
+                    <th>Education </th>
+                    <td>
+                        <select>
+                            <option> Choose </option>
+                            <option> BCA </option>
+                            <option> MCA </option>
+                            <option> B.Tech </option>
+                            <option> Other </option>
+                        </select>
+                    </td>
+                    <th> Passing Year</th>
+                    <td> <input type="number" placeholder="passing Year"/> </td>
+                </tr>
+
+                <tr>
+                    <th> Hobbies </th>
+                    <td colspan="3">
+                        <input type="checkbox" id="a"/> <label for="a"> Book Reading </label>
+                        <input type="checkbox" id="b"/> <label for="b"> Book Writing </label>
+                        <input type="checkbox" id="c"/> <label for="c"> Playing </label>
+                        <input type="checkbox" id="d"/> <label for="d"> Singing </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th> Profile Photo </th>
+                    <td> <input type="file"/> </td>
+                    <td colspan="2"> <input type="checkbox" checked="checked"/> Hide My Photo in Public </td>
+
+                </tr>
+
+                <tr>
+                    <th> Full Adress </th>
+                    <td colspan="3"> <textarea rows="8" cols="70" placeholder="enter your address"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <input type="checkbox"/> I agree on Terms & Conditions...
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="4">
+                        <button type="submit"> Submit </button>
+                        <button type="reset"> Clear </button>
+                    </th>
+                </tr>
+            </table>
+        </form>
+        
+    </body>
+</html>

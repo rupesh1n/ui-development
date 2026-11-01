@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Table in HTML</title>
+    </head>
+    <body>
+        <h1 align="center"> Employee List</h1>
+        <table align="center" cellpadding="12" cellspacing="0" border="1" bordercolor="blue">
+            <thead>
+                <tr bgcolor="orange">
+                    <th> Emp Id </th>
+                    <th> Employee Name </th>
+                    <th> Department </th>
+                    <th> Salary </th>
+                    <th> City </th>
+                    <th> Reporting To </th>
+                    <th> Project Name</th>
+                    <th> Client Name</th>
+                    <th> Company Name </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> 1 </td>
+                    <td> Sumit Kumar </td>
+                    <td> HR </td>
+                    <td> Rs. 25000 </td>
+                    <td> Bangalore </td>
+                    <td rowspan="2" bgcolor="paleyellow"> Mukesh </td>
+                    <td rowspan="4" bgcolor="pink"> Lead Management </td>
+                    <td rowspan="5" valign="middle"> Samsung </td>
+                    <td rowspan="7"> BPL </td>
+                </tr>
+                <tr>
+                    <td> 2 </td>
+                    <td> Kush </td>
+                    <td> Junior HR </td>
+                    <td> Rs. 15000 </td>
+                    <td> Mumbai </td>
+                </tr>
+                <tr>
+                    <td> 3 </td>
+                    <td> Manish </td>
+                    <td> Developer </td>
+                    <td> Rs. 45000 </td>
+                    <td> Kolkata </td>
+                    <td rowspan="2" bgcolor="yellow"> Govind </td>
+                </tr>
+                <tr>
+                    <td> 4 </td>
+                    <td> Mahesh </td>
+                    <td> Developer </td>
+                    <td> Rs. 35000 </td>
+                    <td> Kolkata </td>
+                </tr>
+                <tr>
+                    <td> 5 </td>
+                    <td> Yakshit Shraff </td>
+                    <td> React Developer </td>
+                    <td> Rs. 30000 </td>
+                    <td> Chennai </td>
+                    <td> Sohan Lal </td>
+                    <td> Email Application  </td>
+                </tr>
+                <tr>
+                    <td> 6 </td>
+                    <td> Manoj </td>
+                    <td> PHP Developer </td>
+                    <td> Rs. 20000 </td>
+                    <td colspan="4"> Mumbai </td>
+                </tr>
+                <tr>
+                    <td> 7 </td>
+                    <td> Shraff </td>
+                    <td> React Developer </td>
+                    <td> Rs. 30000 </td>
+                    <td> Chennai </td>
+                    <td> Sohan </td>
+                    <td> Email Application  </td>
+                    <td> Wipro </td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr bgcolor="lightgray">
+                    <th> Emp Id </th>
+                    <th> Employee Name </th>
+                    <th> Department </th>
+                    <th> Salary </th>
+                    <th> City </th>
+                    <th> Reporting To </th>
+                    <th> Project Name </th>
+                    <th> Client Name</th>
+                    <th> Company Name </th>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

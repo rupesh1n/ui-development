@@ -1,0 +1,132 @@
+=> what are valid extension of html document
+    .html - this is best for digital marketing. It is also called SEO (Serch Engine) friendly. 
+    .htm  -
+
+=> what is doc type in html?
+    <!DOCTYPE html>
+    it introduce to browser that the current page is a html document.
+    it also introduced to browser that current file may have html-5 tags also.
+
+=> The Structure of html document?
+     <html>
+         <head></head>
+         <body></body>
+    </html>
+    html start to end called document.
+    The html document devide into 2 parts
+      => head 
+            -> marketing block (digital marketing + 9+ tools of google search engine)
+            -> library block (css, js, other library)
+      => body
+            -> input tag
+            -> output tag
+               for required input and output
+-------------------------------------------------------------------------------------
+    h1 to h6 is called heading tag.
+       -> it use to create headline of webpage.
+       -> h1 should be use in each page. but only 1 time.
+       -> h2 to h6 use any number of time in each page.
+---------------------------------------------------------------------------------------
+    p - it use to display text data in webpage.
+---------------------------------------------------------------------------------------
+    b, u, i, font, strong etc tags are called text formating tags.
+---------------------------------------------------------------------------------------
+    Type of List in html
+        1. OL - Order List
+             type of OL
+             => type="1"
+             => type="A"
+             => type="a"
+             => type="I"
+             => type="i"
+        2. UL - unorder List
+            type of UL
+             => type="disc"
+             => type="square"
+             => type="circle"
+             => type="none"
+        3. DL - Definition List
+            => dt - definition title
+            => dd - definition details
+---------------------------------------------------------------------------------------
+    How to Link The page
+        -> <a href="next-pagename" title="" target=""> Text To click </a>
+        page5.html
+        page6.html
+
+        title - it introduce to serch engine that what is purpose of this Link
+        target - it use to the location that when the next page should open
+                as- in new tab, blank tab, in same tab
+    type of target ?
+        1. _self - it open next page in same tab. it is default target
+        2. _name - it open next page in new tab but only at 1st click.
+        3. _blank - it open next page in new tab on every click.
+---------------------------------------------------------------------------------------
+    Table in html   
+        1. method
+            => Table
+                -> caption
+                -> tr (table row)
+                    -> th (table heading) 
+                    -> td (table data)
+        2. method
+            => table
+                -> thead - it cover top section of table
+                    -> tr
+                -> tbody - it cover middle section of table
+                    -> tr
+                        -> td
+                -> tfoot - it cover last section of table
+                    -> tr
+                        -> th
+        List of property in table, tr, th, td
+            align - left, center, right
+            border - 1, 2, 3, 4
+            bordercolor - 
+            cellpadding - it apply space inside th, td
+            cellspacing - it apply space outside th,td
+        => table.html
+            width -
+            colspan - it used to combine space of 2 or more th, td (left to right)
+            rowspan - it used to combine space of 2 or more tr (top to bottom)
+
+---------------------------------------------------------------------------------------
+    List of input tags:
+         -> text - to collect alpha numeric value
+         -> number - to collect only number (size property will not work in chrome browser for number)
+         -> email - to collect input email format
+        -> password - to collect secure input
+         -> textarea - to collect multi line input
+        -> select - to choose from given option
+        -> file - to browse and upload any type of file
+        -> date - to choose date from date picker
+        -> checkbox - to check 1 or multiple option
+        -> radio button - to choose any one from given
+        -> button - for action purpose
+        -> submit
+        -> reset
+        -> button
+    
+    =>Property & values in input tags
+        placeholder - it is for input guidance
+        size - it use to resize width of text, email, password
+        maxlength - it use to set linit of input. like how many char the user should enter
+        rows - it set the height of text area
+        cols - it set the width of text area
+        name - it create a container that hold the value given by user
+    => from tag
+        -> it is parent tag of all input tag.
+        -> it has 2 most importent property
+            -> action - it set the url of backend language where need to submit form data
+            -> method - it set type of communication secure or unsecure
+                -> get - it pass data via browser url and fully visible. marked as unsecure.
+                -> post - it pass data in hidden format. marked as fully secure
+                -> delete - it send request to delete a data
+                -> put - it send request to update the data - all data
+                -> patch - it send request to update data but only modified data. not all
+
+
+---------------------------------------------------------------------------------------
+
+
+====================================================================================
