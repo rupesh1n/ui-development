@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () => {
+                let mynumber = "";
+                for(let i = 1; i<=10; i++){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+            const two = () => {
+                let mynumber = "";
+                for(let i = 11; i<=20; i++){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+            const three = () => {
+                let mynumber = "";
+                for(let i = 1; i< 40; i = i+2){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+
+            const four = () => {
+                let mynumber = "";
+                for(let i = 2; i<=40; i = i+2){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+            const five = () => {
+                let mynumber = "";
+                for(let i = 1; i<=100; i = i+3){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+
+            const six = () => {
+                let mynumber = "";
+                for(let i = 49; i>= 1; i = i-2){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+
+            const seven = () => {
+                let mynumber = "";
+                for(let i = 50; i>=2; i = i-2){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+
+            const eight = () => {
+                document.getElementById("container").innerHTML="";
+            }
+        </script>
+    </head>
+    <body>
+        <h1> JavaScript & Loop </h1>
+
+            <button onclick="one()"> 1 To 10</button>
+            <button onclick="two()"> 11 To 20</button>
+            <button onclick="three()"> 1 To 40 odd number</button>
+            <button onclick="four()"> 1 To 40 even number</button>
+            <button onclick="five()"> 1 To 100 Skip 3 number</button>
+            <button onclick="six()"> 50 To 1 odd number</button>
+            <button onclick="seven()"> 50 To 1 even number</button>
+            <button onclick="eight()"> Clear All</button>
+         <br\> <br\>
+         <section id="container"></section>
+    </body>
+</html>

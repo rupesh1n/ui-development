@@ -1,0 +1,105 @@
+
+=> Variable in javascript?
+
+=> Difference between var, let, const
+    var, let, const use to create variable in javascript.
+    let and const was introduced in 2015.
+
+    Value change
+        -> var allow to change the value
+        -> let allow to change the value
+        -> const do not allow to change value
+
+    Re-Declaration
+        -> var allow to re-declare
+        -> let and const do not allow
+
+    Scope of Variable
+        -> var has global Scope
+        -> let and const have block level scope able to access only within( ......)
+--------------------------------------------------------------
+=> control Structure
+    -> it control the flow of data in application
+
+    1. condition
+        -> if else
+        -> if else if
+        -> nested condition
+        -> switch case
+        if - use to check range condition and exact condition
+        Switch case use to check only exact condition
+        isNaN() - it use to check given value is number or not
+            -> for string value it return true.
+            -> for number value it return false.
+
+        = for assignment
+        == for compare the value
+        === for value and data type compare
+
+    2. loop
+        -> for
+            Syntex
+                for(init; condition; ++--){
+                    statement
+                }
+        -> while
+        -> do while
+--------------------------------------------------------------
+
+    function
+        ....
+--------------------------------------------------------------
+    types of popup window
+        1. alert() - it use to give confirmation message to user
+        2. confirm() - it use to ask confirmation from user
+        3. prompt() - it use to collect input from user via popup window
+--------------------------------------------------------------------------
+    Events in javascript
+        The Type of User interaction with UI Called event in javascript
+        it is of following type
+    1. Mouse Events
+        ->onClick
+        ->ondblclick
+        ->onmousedown
+        ->onmouseenter
+        ->onmouseout
+        ->onmousemove
+        ->onchange
+
+    2. Keyboard Events
+        -> onkeypress
+            1. It take previous value 
+            2. backspace will not work
+        -> onkeydown
+            1. It take previous value 
+            2. backspace will work
+        ->onkeyup
+            1. It take old + new value 
+            2. backspace will work
+        ->onfocus
+            It takes old value as curser focus in element
+        ->onblur
+            It take old + new value as curser move out from element
+
+    3. Body Events
+     ->onload
+    4. Form Events
+     -> onsubmit -Will study at end of js with form validation
+--------------------------------------------------------------------------
+    Difference between
+        .innerHTML
+        .innerText  
+    document : it represent the current page. from start to end
+    write() : It replace all contents of specific location
+--------------------------------------------------------------------------
+4-Json Server
+    How to install Json Server
+        npm install -g json-server
+    How to start Json Server
+        json-server --watch data.json --port 1234
+
+--------------------------------------------------------------------------
+5-class-object
+    -> All The user defined function of a class is called member function or member method
+    -> constructor is a life cycle function of JavaScript class object.
+    ->The "this" keyword is object of current class. It works only inside the class, using "this" keyword we can access member variables or member function of current class.

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const printMessage = (mydata) =>{
+                document.getElementById("showmessage").innerText = mydata;
+                document.getElementById("notice").innerText = 100 - mydata.length + " : character left out of 100";
+
+                if(mydata.length > 75)
+                    document.getElementById("notice").style.color="red";
+                else
+                    document.getElementById("notice").style.color="black";
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1> JavaScript input and Output </h1>
+        <p> Enter Your Message </p>
+        <textarea rows="10" cols="50" onkeyup="printMessage(this.value)" maxlength="100"></textarea>
+
+        <p id="showmessage"></p>
+
+        <p id="notice"> 100 character left out of 100</p>
+    </body>
+</html>

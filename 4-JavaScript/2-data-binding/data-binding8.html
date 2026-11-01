@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const showMe = () => {
+                let password = document.getElementById("pass").value;
+                document.getElementById("pass").type = "text";
+            }
+
+            const hideMe = () =>{
+                let password = document.getElementById("pass").value;
+                document.getElementById("pass").type = "password";
+            }
+        </script>
+    </head>
+    <body>
+        <h1> How to Change Property of Tags </h1>
+        <p>Enter Your Password : <input type="password" id="pass"/>
+            <button onclick="showMe()"> Show </button>
+            <button onclick="hideMe()"> Hide </button>
+        </p>
+        
+    </body>
+</html>

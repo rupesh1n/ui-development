@@ -1,0 +1,70 @@
+body{
+    margin: 20px 10% 20px;
+}
+header{
+    text-align: center;
+    padding: 10px;
+}
+#container{
+    text-align: center;
+}
+h1{
+    color: red;
+    font-size: 40px;
+}
+.four{
+    width: 20%;
+    display: inline-block;
+    font-size: 35px;
+    color: blue;
+    margin: 50px 2% 50px;
+}
+.two{
+    width: 43%;
+    display: inline-block;
+    text-align: left;
+    margin: 2%;
+    padding: 1%;
+    box-shadow: 0px 0px 2px gray;
+    vertical-align: top;
+}
+.three{
+    width: 43%;
+    display: inline-block;
+    margin: 50px 2% 50px;
+    margin: 2%;
+    padding: 1%;
+    box-shadow: 0px 0px 2px burlywood;
+}
+.one{
+    width: 20%;
+    display: inline-block;
+    margin: 50px 2% 50px;
+    margin: 2%;
+    padding: 1%;
+    box-shadow: 0px 0px 2px palevioletred;
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+.five{
+    width: 20%;
+    display: inline-block;
+    margin: 50px 2% 50px;
+    margin: 2%;
+    padding: 1%;
+    box-shadow: 0px 0px 2px olivedrab;
+    color: white;
+    background-color: darkcyan;
+    border-radius: 5px;
+    
+}
+.six{
+    width: 43%;
+    display: inline-block;
+    margin: 50px 2% 50px;
+    margin: 2%;
+    padding: 1%;
+    box-shadow: 0px 0px 2px palevioletred;
+}

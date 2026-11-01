@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const savebook = ()=>{
+                let bname = document.getElementById("bname").value;
+                let bcost = document.getElementById("bcost").value;
+                let bseller = document.getElementById("bseller").value;
+                let newBook = {bookname:bname, cost:bcost, seler:bseller};
+                
+                const myurl = new URLSearchParams(window.location.search);
+                const id = myurl.get('id');
+
+                let url = "http://localhost:1234/bookapi/" + id;
+                let postdata ={
+                    headers:{'Content-Type':'application/json'},
+                    method:"put",
+                    body:JSON.stringify(newBook)
+                }
+                fetch(url, postdata)
+                .then(response=>response.json())
+                .then(bookinfo=>{
+                    alert(bname + " Save Sucessfully");
+                    window.location.href = "booklist.html";
+                })
+            }
+
+            const getbookinfo = () =>{
+                const url = new URLSearchParams(window.location.search);
+                const id = url.get('id');
+               // alert( url + "\n" + window.location + "\n" + window.location.search + "\n" + id);
+               let apiurl = "http://localhost:1234/bookapi/" + id;
+               fetch(apiurl)
+               .then(response=>response.json())
+               .then(book=>{
+                    document.getElementById("bname").value = book.bookname;
+                    document.getElementById("bcost").value = book.cost;
+                    document.getElementById("bseller").value = book.seler;
+               })
+            }
+        </script>
+        <style>
+            a{ margin-right: 35px; font-size: 20px;}
+            table{
+                padding: 30px;
+                border: 5px dotted orange;
+            }
+        </style>
+    </head>
+    <body onload="getbookinfo()">
+        <p align="center">
+            <a href="userlist.html"> Manage User </a>
+            <a href="newuser.html"> New User </a>
+            <a href="booklist.html"> Manage Book </a>
+            <a href="notebook.html"> New Book </a>
+            <a href="emplist.html"> Manage Employee </a>
+            <a href="newemp.html"> New Employee </a>
+        </p>
+        <table align="center" cellpadding="15">
+            <caption>
+                <h1> Update Book Details</h1>
+            </caption>
+            <tr>
+                <th> Book Name </th>
+                <td> <input type="text" id="bname" /> </td>
+            </tr>
+            <tr>
+                <th> Cost </th>
+                <td> <input type="number" id="bcost" /> </td>
+            </tr>
+            <tr>
+                <th> Seller </th>
+                <td> <input type="text" id="bseller" /> </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button onclick="savebook()"> Update Book </button>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>

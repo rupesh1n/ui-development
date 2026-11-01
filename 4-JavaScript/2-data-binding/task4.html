@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            th{
+                color: brown;
+                text-align: left;
+                background: rgb(250, 249, 249);
+            }
+            tr,th,td{
+                border: 0.5px solid gray;
+                padding: 10px 30px 10px;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            button{
+                background-color: white;
+                border: 1px solid red;
+                padding: 4px;
+                font-weight: bold;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+            button:focus{
+                background: red;
+                color: white;
+            }
+        </style>
+        <script>
+            let itemlist = [
+                {name:"VICHILE-1", type:"Small", root:"Banglore", driver:"Akssh Yadav", mobil:8901236709},
+                {name:"VICHILE-2", type:"Medium", root:"Delhi", driver:"Kabir Singh", mobil:7801236709},
+                {name:"VICHILE-3", type:"Large", root:"Patna", driver:"Sonal Raut", mobil:6501236709},
+                {name:"VICHILE-4", type:"X-Large", root:"Kolkata", driver:"Deep Sahu", mobil:8001236709},
+            ];
+
+            const getitem = () =>{
+                let data = "";
+                itemlist.map((item, index) =>{
+                    data = data + `<tr> 
+                                        <td> ${index} </td>
+                                        <td> ${item.name}</td>
+                                        <td> ${item.type}</td>
+                                        <td> ${item.root}</td>
+                                        <td> ${item.driver}</td>
+                                        <td> ${item.mobil}</td>
+                                        <td><button onclick=delitem(${index})> Delete </button> </td>
+                                   </tr>`;
+                })
+                document.getElementById("container").innerHTML = data;
+            }
+            const delitem = (index) => {
+                itemlist.splice(index, 1); // delete specfic item from given position
+                getitem(); //reload the list
+            }
+        </script>
+    </head>
+    <body onload="getitem()">
+        <section>
+            <aside>
+                
+            </aside>
+            <div>
+                <table align="center" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th> T-Id </th>
+                            <th> T-Number </th>
+                            <th> T-Type </th>
+                            <th> Transport root</th>
+                            <th> Driver </th>
+                            <th> Mobile No </th>
+                            <th> Action </th>
+                        </tr>
+                    </thead>
+                    <tbody id="container"></tbody>
+                </table>
+            </div>
+        </section>
+       
+    </body>
+</html>

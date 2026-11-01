@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const disableMe = () => {
+                document.getElementById("message").disabled = true;
+            }
+
+            const enableMe = () =>{
+                document.getElementById("message").disabled = false;
+            }
+        </script>
+    </head>
+    <body>
+        <h1> How to Change Property of Tags </h1>
+        <textarea rows="10" cols="60" id="message"></textarea>
+        <p> 
+            <button onclick="disableMe()"> Disable input</button>
+            <button onclick="enableMe()"> Enable input</button>
+        </p>
+        
+    </body>
+</html>

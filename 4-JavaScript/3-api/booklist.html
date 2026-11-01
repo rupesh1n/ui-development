@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const getbooklist = async()=>{
+                await fetch("http://localhost:1234/bookapi")
+                .then(response => response.json())
+                .then(bookArray=>{
+                    let data ="";
+                    bookArray.map((book, index) =>{
+                        data = data + `<tr>
+                                    <td> ${book.id}</td>
+                                    <td> ${book.bookname}</td>
+                                    <td> ${book.cost}</td>
+                                    <td> ${book.seler}</td>
+                                    <td> <a href='editbook.html?id=${book.id}'> Edit </a> </td>
+                                    <td> <button onclick=deletebook('${book.id}')> Delete </button> </td>
+                                    </tr>`;
+                    })
+                    document.getElementById("container").innerHTML = data;
+                })
+            }
+            const deletebook = (id) =>{
+               let url = "http://localhost:1234/bookapi/"+id;
+               let postdata = {method:"delete"};
+               fetch(url, postdata)
+               .then(response=>response.json())
+               .then(bookinfo=>{
+                alert(bookinfo.bookname + " - Deleted Successfully !");
+                getbooklist(); // reload the list after delete
+               })
+            }
+        </script>
+        <style>
+            a{ margin-right: 35px; font-size: 20px;}
+        </style>
+    </head>
+    <body onload="getbooklist()">
+        <p align="center">
+            <a href="userlist.html"> Manage User </a>
+            <a href="newuser.html"> New User </a>
+            <a href="booklist.html"> Manage Book </a>
+            <a href="notebook.html"> New Book </a>
+            <a href="emplist.html"> Manage Employee </a>
+            <a href="newemp.html"> New Employee </a>
+        </p>
+
+
+        <h1 align="center"> Manage Book List</h1>
+        <table align="center" cellpadding="15">
+            <thead>
+                <tr>
+                    <th> Book ID </th>
+                    <th> Book Name </th>
+                    <th> Cost</th>
+                    <th> Seller </th>
+                    <th> Edit </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr>
+                    <td colspan="6" align="center"> No Records ....</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

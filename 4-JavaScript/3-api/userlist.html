@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const getuser = async()=>{
+                await fetch("http://localhost:1234/userapi")
+                .then(response => response.json())
+                .then(userArray=>{
+                    let data ="";
+                    userArray.map((user, index) =>{
+                        data = data + `<tr>
+                                    <td> ${user.id}</td>
+                                    <td> ${user.fullname}</td>
+                                    <td> ${user.mobile}</td>
+                                    <td> ${user.city}</td>
+                                    <td> ${user.age}</td>
+                                    <td> <a href='edituser.html?id=${user.id}'> Edit </a> </td>
+                                    <td> <button onclick=deleteuser('${user.id}')> Delete </button> </td>
+                                    </tr>`;
+                    })
+                    
+                    document.getElementById("container").innerHTML = data;
+                })
+            }
+
+            const deleteuser = (id) =>{
+               let url = "http://localhost:1234/userapi/"+id;
+               let postdata = {method:"delete"};
+               fetch(url, postdata)
+               .then(response=>response.json())
+               .then(userinfo=>{
+                alert(userinfo.fullname + " -Deleted Successfully !");
+                getuser(); // reload the list after delete
+               })
+            }
+        </script>
+        <style>
+            a{ margin-right: 35px; font-size: 20px;}
+        </style>
+    </head>
+    <body onload="getuser()">
+        <p align="center">
+            <a href="userlist.html"> Manage User </a>
+            <a href="newuser.html"> New User </a>
+            <a href="booklist.html"> Manage Book </a>
+            <a href="notebook.html"> New Book </a>
+            <a href="emplist.html"> Manage Employee </a>
+            <a href="newemp.html"> New Employee </a>
+        </p>
+
+
+        <h1 align="center"> Manage User List</h1>
+        <table align="center" cellpadding="15">
+            <thead>
+                <tr>
+                    <th> User ID </th>
+                    <th> Full Name </th>
+                    <th> Mobile No </th>
+                    <th> City </th>
+                    <th> Age </th>
+                    <th> Edit </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr>
+                    <td colspan="7" align="center"> No Records ....</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+        <script>
+            const gethome = () =>{
+                var xmlhttp = new XMLHttpRequest(); // create object to communicate with server
+                xmlhttp.open("GET","home.html"); // url is generated based on get method
+                xmlhttp.send(); // request sent to above generated url
+
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ajexdata").innerHTML = this.responseText;
+                }
+                };
+            }
+
+        /*
+        Value	State	Description
+            0	UNSENT	Client has been created. open() not called yet.
+            1	OPENED	open() has been called.
+            2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+            3	LOADING	Downloading; responseText holds partial data.
+            4	DONE	The operation is complete.
+
+        */
+            const getabout = () =>{
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ajexdata").innerHTML = this.responseText;
+                }
+                };
+                xmlhttp.open("GET","about.html");
+                xmlhttp.send();
+            }
+
+            const getcontact = () =>{
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ajexdata").innerHTML = this.responseText;
+                }
+                };
+                xmlhttp.open("GET","contact.html");
+                xmlhttp.send();
+            }
+
+            const getservice = () =>{
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ajexdata").innerHTML = this.responseText;
+                }
+                };
+                xmlhttp.open("GET","service.html");
+                xmlhttp.send();
+            }
+
+        </script>
+    </head>
+    <body onload="gethome()">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-lg-4 text-danger">
+                    <h1> AJAX </h1>
+                </div>
+                <div class="col-lg-8 text-end">
+                    <div>
+                        <button class="btn btn-info" onclick="gethome()"> Home </button>
+                        <button class="btn btn-primary" onclick="getabout()"> About Us </button>
+                        <button class="btn btn-success" onclick="getcontact()"> Contact Us </button>
+                        <button class="btn btn-warning" onclick="getservice()"> Our Servies </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="list-group">
+                        <li class="list-group-item active"> Easy Navigation</li>
+                        <li class="list-group-item "> Website Development</li>
+                        <li class="list-group-item " onclick="getabout()"> Digital Marketing</li>
+                        <li class="list-group-item "> Content Writing</li>
+                        <li class="list-group-item "> App Development</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-9" id="ajexdata">
+                    <p class="text-center text-danger"> Please Wait Loading... </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

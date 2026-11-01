@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="../../3-Bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="../../3-Bootstrap/icon/css/all.css"/>
+        <style>
+            button{
+                background-color: white;
+                border: 1px solid red;
+                padding: 4px;
+                font-weight: bold;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+            button:focus{
+                background: red;
+                color: white;
+            }
+        </style>
+        <script src="../../3-Bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            let itemlist = [
+                {name:"VICHILE-1", type:"Small", root:"Banglore", driver:"Akssh Yadav", mobil:8901236709},
+                {name:"VICHILE-2", type:"Medium", root:"Delhi", driver:"Kabir Singh", mobil:7801236709},
+                {name:"VICHILE-3", type:"Large", root:"Patna", driver:"Sonal Raut", mobil:6501236709},
+                {name:"VICHILE-4", type:"X-Large", root:"Kolkata", driver:"Deep Sahu", mobil:8001236709},
+            ];
+
+            const getitem = () =>{
+                let data = "";
+                itemlist.map((item, index) =>{
+                    data = data + `<tr> 
+                                        <td> ${index} </td>
+                                        <td> ${item.name}</td>
+                                        <td> ${item.type}</td>
+                                        <td> ${item.root}</td>
+                                        <td> ${item.driver}</td>
+                                        <td> ${item.mobil}</td>
+                                        <td><button onclick=delitem(${index})> Delete </button> 
+                                            <button onclick=edititem(${index})> Edit </button> </td>
+                                   </tr>`;
+                })
+                document.getElementById("result").innerHTML = data;
+            }
+            const delitem = (index) => {
+                itemlist.splice(index, 1); // delete specfic item from given position
+                getitem(); //reload the list
+                swal("Deleted", "Item Deleted Successfully", "success")
+            }
+
+            let itemindex = -1;
+            const edititem = (index) =>{
+                console.log(itemlist[index]);
+                itemindex = index;
+
+                document.getElementById("tnumber").value = itemlist[index].name;
+                document.getElementById("ttype").value = itemlist[index].type;
+                document.getElementById("troot").value = itemlist[index].root;
+                document.getElementById("tdriver").value = itemlist[index].driver;
+                document.getElementById("tmobile").value = itemlist[index].mobil;
+            }
+
+            const save = () => {
+                let tnumber = document.getElementById("tnumber").value;
+                let ttype = document.getElementById("ttype").value;
+                let troot = document.getElementById("troot").value;
+                let tdriver = document.getElementById("tdriver").value;
+                let tmobile = document.getElementById("tmobile").value;
+
+                if(tnumber == ""){
+                    swal("Invalid", "Invalid Item Name", "error")
+                    document.getElementById("tnumber").focus();
+                } else{
+
+                        let newItem = {name:tnumber, type:ttype, root:troot, driver:tdriver, mobil:tmobile};
+                        if(itemindex== -1){
+                            itemlist.push(newItem);
+                            swal("Added", "Item Save Successfully", "info");
+                        } else {
+                            itemlist[itemindex] = newItem;
+                            itemindex = -1; // set default after
+                            swal("Updated", "Item Updated Successfully", "info");
+                        }
+                        getitem(); //call to reload the list
+                        document.getElementById("tnumber").value = "";
+                        document.getElementById("ttype").value = "";
+                        document.getElementById("troot").value = "";
+                        document.getElementById("tdriver").value = "";
+                        document.getElementById("tmobile").value = "";
+                }
+
+            }
+        </script>
+    </head>
+    <body onload="getitem()">
+       
+          <section class="p-3">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-xl-3">
+                        <div class="card ">
+                            <div class="card-header text-danger bg-danger bg-opacity-10"> New Transport</div>
+                            <div class="card-body m-1">
+                                <div class="mb-2">
+                                    <label class="fw-bold">Transport Number</label>
+                                    <input type="text" class="form-control mt-1" id="tnumber"/>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label class="fw-bold"> Root Name</label>
+                                    <input type="text" class="form-control mt-1" id="troot"/>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label class="fw-bold"> Size</label>
+                                    <select class="form-select mt-1" id="ttype">
+                                        <option>  </option>
+                                        <option> Small </option>
+                                        <option> Medium </option>
+                                        <option> Large </option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label class="fw-bold"> Driver Name</label>
+                                    <input type="text" class="form-control mt-1" id="tdriver"/>
+                                </div>
+
+                                <div class="mb-2">
+                                    <label class="fw-bold"> Driver Mobile No</label>
+                                    <input type="text" class="form-control mt-1" id="tmobile"/>
+                                </div>
+                                <div class="row">
+                                    <button class="btn btn-primary" onclick="save()"> Save </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-9">
+                        
+                        <div class="row mb-3">
+                            <div class="col-xl-12">
+                                <table class="table table-bordered table-sm">
+                                    <thead class="table-secondary">
+                                        <tr>
+                                            <th class="text-danger">T-id</th>
+                                            <th class="text-danger"> T-Number </th>
+                                            <th class="text-danger"> T-Type </th>
+                                            <th class="text-danger"> Transport root </th>
+                                            <th class="text-danger"> Driver </th>
+                                            <th class="text-danger"> Mobile No </th>
+                                            <th class="text-danger"> Action </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="result">
+                                       
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+          </section>
+        
+    </body>
+</html>

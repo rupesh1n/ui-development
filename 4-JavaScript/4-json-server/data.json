@@ -1,0 +1,94 @@
+{
+  "empapi": [
+    {
+      "empname": "Alex",
+      "salary": "1200",
+      "dept": "Marketing",
+      "id": "1"
+    },
+    {
+      "empname": "azad",
+      "salary": "230",
+      "dept": "bus",
+      "id": "3285"
+    }
+  ],
+  "bookapi": [
+    {
+      "bookname": "HTML",
+      "cost": "100",
+      "seler": "Alex",
+      "id": "1"
+    },
+    {
+      "id": "0a55",
+      "bookname": "C",
+      "cost": "10",
+      "seler": "Mart"
+    },
+    {
+      "id": "c6c6",
+      "bookname": "Java",
+      "cost": "1200",
+      "seler": "Alex"
+    }
+  ],
+  "userapi": [
+    {
+      "id": "1",
+      "fullname": "Alex",
+      "mobile": "9801237845",
+      "city": "Banglore",
+      "age": "30 Years"
+    },
+    {
+      "id": "2",
+      "fullname": "Mohan",
+      "mobile": "670237840",
+      "city": "Kolkata",
+      "age": "24 Years"
+    },
+    {
+      "id": "3",
+      "fullname": "Shyam",
+      "mobile": "9123456709",
+      "city": "Patna",
+      "age": "40 Years"
+    },
+    {
+      "id": "728d",
+      "fullname": "RUPESH KUMAR",
+      "mobile": "08123472776",
+      "city": "Bengaluru",
+      "age": "22"
+    },
+    {
+      "id": "fe2e",
+      "fullname": "RUPESH KUMAR",
+      "mobile": "08123472776",
+      "city": "Bengaluru",
+      "age": "90"
+    },
+    {
+      "id": "969b",
+      "fullname": "NEHA SONY",
+      "mobile": "09481512453",
+      "city": "Banglore",
+      "age": "56"
+    },
+    {
+      "fullname": "Alex",
+      "mobile": "9801237845",
+      "city": "Banglore",
+      "age": "20 Years",
+      "id": "6258"
+    },
+    {
+      "fullname": "Avishek",
+      "mobile": "9801237845",
+      "city": "Banglore",
+      "age": "30 Years",
+      "id": "e108"
+    }
+  ]
+}

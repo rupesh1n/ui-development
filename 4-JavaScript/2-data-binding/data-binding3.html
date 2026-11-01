@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () =>{
+                let fullname = document.getElementById("myname").value;
+                document.getElementById("showname").innerText = fullname;
+
+                let mobile = document.getElementById("mymobile").value;
+                document.getElementById("showmobile").innerText = mobile;
+                
+                let email = document.getElementById("myemail").value;
+                document.getElementById("showemail").innerText = email;
+
+                let address = document.getElementById("myaddress").value;
+                document.getElementById("showaddress").innerText = address;
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1> JavaScript input & output </h1>
+        <table cellpading="20">
+            <tr>
+                <td> Full Name</td>
+                <td> <input type="text" id="myname" onkeyup="one()"/></td>
+                <td> <p id="showname"> ..... </p></td>
+            </tr>
+            <tr>
+                <td> Mobile  Number</td>
+                <td> <input type="number" id="mymobile" onkeyup="one()"/></td>
+                <td> <p id="showmobile"> ..... </p></td>
+            </tr>
+            <tr>
+                <td> Email Id</td>
+                <td> <input type="email" id="myemail" onkeyup="one()"/></td>
+                <td> <p id="showemail"> ..... </p></td>
+            </tr>
+            <tr>
+                <td> E-mail Id</td>
+                <td> <textarea id="myaddress" onkeyup="one()"></textarea></td>
+                <td> <p id="showaddress"> ..... </p></td>
+            </tr>
+        </table>
+    </body>
+</html>

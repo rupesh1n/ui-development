@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () =>{
+                let fullname = document.getElementById("myname").value;
+                document.getElementById("showname").innerText = fullname;
+
+                let mobile = document.getElementById("mymobile").value;
+                document.getElementById("showmobile").innerText = mobile;
+                
+                let email = document.getElementById("myemail").value;
+                document.getElementById("showemail").innerText = email;
+
+                let address = document.getElementById("myaddress").value;
+                document.getElementById("showaddress").innerText = address;
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1> JavaScript input & output </h1>
+        <p> Enter Your Name : <input type="text" id="myname"/> </p>
+        <p id="showname"> ..... </p>
+
+        <p> Enter Mobile Number : <input type="number" id="mymobile"/> </p>
+        <p id="showmobile"> ..... </p>
+
+        <p> Enter E-mail Id : <input type="email" id="myemail"/> </p>
+        <p id="showemail"> ..... </p>
+
+        <p> <textarea id="myaddress"></textarea> </p>
+        <p id="showaddress"></p>
+
+        <button onclick="one()">Go</button>
+    </body>
+</html>

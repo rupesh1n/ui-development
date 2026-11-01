@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width:700px;
+                margin:100px auto;
+                padding: 40px;
+                box-shadow: 0px 0px 10px gray;
+                text-align: center;
+            }
+        </style>
+        <script>
+            const one = () =>{
+                let n1 = document.getElementById("n1").value
+                let n2 = document.getElementById("n2").value
+                let result = parseInt(n1) + parseInt(n2);
+                document.getElementById("result").innerText = "Result is : " + result
+            }
+            const two = () =>{
+                let n1 = document.getElementById("n1").value
+                let n2 = document.getElementById("n2").value
+                let result = parseInt(n1) - parseInt(n2);
+                document.getElementById("result").innerText = "Result is : " + result
+            }
+
+            const three = () =>{
+                let n1 = document.getElementById("n1").value
+                let n2 = document.getElementById("n2").value
+                let result = parseInt(n1) * parseInt(n2);
+                document.getElementById("result").innerText = "Result is : " + result
+            }
+
+            const four = () =>{
+                let n1 = document.getElementById("n1").value
+                let n2 = document.getElementById("n2").value
+                let result = parseInt(n1) / parseInt(n2);
+                document.getElementById("result").innerText = "Result is : " + result
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1> JavaScript +, - , * , / </h1>
+            <p> Enter 1st Number : <input type="number" id="n1" />
+                Enter 2nd Number : <input type="number" id="n2" />
+            </p>
+
+            <button onclick="one()"> 1st Number + 2nd Number </button>
+            <button onclick="two()"> 1st Number - 2nd Number </button>
+            <button onclick="three()"> 1st Number * 2nd Number </button>
+            <button onclick="four()"> 1st Number / 2nd Number </button>
+
+            <h2 id="result"> Result is :</h2>
+        </div>
+    </body>
+</html>

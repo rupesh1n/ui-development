@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const saveuser = ()=>{
+                let fname = document.getElementById("fname").value;
+                let mymobile = document.getElementById("mymobile").value;
+                let mycity = document.getElementById("mycity").value;
+                let myage = document.getElementById("myage").value;
+
+                let newUser = {fullname:fname, mobile:mymobile, city:mycity, age:myage};
+                
+                let url = "http://localhost:1234/userapi";
+                let postdata ={
+                    headers:{'Content-Type':'application/json'},
+                    method:"post",
+                    body:JSON.stringify(newUser)
+                }
+                fetch(url, postdata)
+                .then(response=>response.json())
+                .then(userinfo=>{
+                    alert(fname + "Save Sucessfully");
+                    window.location.href = "userlist.html";
+                })
+            }
+        </script>
+        <style>
+            a{ margin-right: 35px; font-size: 20px;}
+        </style>
+    </head>
+    <body>
+        <p align="center">
+            <a href="userlist.html"> Manage User </a>
+            <a href="newuser.html"> New User </a>
+            <a href="booklist.html"> Manage Book </a>
+            <a href="notebook.html"> New Book </a>
+            <a href="emplist.html"> Manage Employee </a>
+            <a href="newemp.html"> New Employee </a>
+        </p>
+        <table align="center" cellpadding="15">
+            <caption>
+                <h1> Enter User Details</h1>
+            </caption>
+            <tr>
+                <th> Full Name </th>
+                <td> <input type="text" id="fname" /> </td>
+            </tr>
+            <tr>
+                <th> Mobile No </th>
+                <td> <input type="number" id="mymobile" /> </td>
+            </tr>
+            <tr>
+                <th> City </th>
+                <td> <input type="text" id="mycity" /> </td>
+            </tr>
+            <tr>
+                <th> Age</th>
+                <td> <input type="text" id="myage" /> </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button onclick="saveuser()"> Save User </button>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>

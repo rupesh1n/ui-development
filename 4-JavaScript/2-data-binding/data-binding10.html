@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = () => {
+                let mynumber = "";
+                for(let i = 1; i<=100; i++){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+            }
+            const two = () => {
+                let mynumber = "";
+                for(let i = 101; i<=200; i++){
+                    mynumber = mynumber + i + "<br/>";
+                }
+                document.getElementById("container").innerHTML = mynumber;
+
+            }
+            const three = () => {
+                document.getElementById("container").innerHTML="";
+            }
+        </script>
+    </head>
+    <body>
+        <h1> JavaScript & Loop </h1>
+
+            <button onclick="one()"> 1 To 100</button>
+            <button onclick="two()"> 101 To 200</button>
+            <button onclick="three()"> Clear All</button>
+         <br\> <br\>
+         <section id="container"></section>
+    </body>
+</html>

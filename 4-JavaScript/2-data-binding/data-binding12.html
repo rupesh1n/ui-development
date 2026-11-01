@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <style>
+            h1{
+                font-size: 50px;
+                color: blue;
+                text-align: center;
+            }
+            th{
+                color: orange;
+                text-align: left;
+            }
+            tr,th,td{
+                border: 0.5px solid skyblue;
+                padding: 10px 50px 10px;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            button:focus{
+                background: red;
+                color: white;
+            }
+            .smallinput{
+                height: 28px;
+                margin: 8px;
+                color: blue;
+            }
+        </style>
+        <script>
+            let itemlist = [
+                {name:"Apple", cost:300, qty:20, soldby:"Alex"},
+                {name:"Orange", cost:100, qty:10, soldby:"Alex"},
+                {name:"Banana", cost:50, qty:40, soldby:"Alex"},
+                {name:"Water", cost:30, qty:80, soldby:"Alex"},
+            ];
+
+            const getitem = () =>{
+                let data = "";
+                itemlist.map((item, index) =>{
+                    data = data + `<tr> 
+                                        <td> ${index} </td>
+                                        <td> ${item.name}</td>
+                                        <td> ${item.cost}</td>
+                                        <td> ${item.qty}</td>
+                                        <td> ${item.soldby}</td>
+                                        <td><button onclick=delitem(${index})> Delete </button>
+                                        <button onclick=edititem(${index})> Edit </button> </td>
+                                   </tr>`;
+                })
+                document.getElementById("container").innerHTML = data;
+            }
+            const delitem = (index) => {
+                itemlist.splice(index, 1); // delete specfic item from given position
+                getitem(); //reload the list
+                swal("Deleted", "Item Deleted Successfully", "success")
+            }
+
+            let itemindex = -1;
+            const edititem = (index) =>{
+                console.log(itemlist[index]);
+                itemindex = index;
+
+                document.getElementById("pname").value = itemlist[index].name;
+                document.getElementById("price").value = itemlist[index].cost;
+                document.getElementById("pqty").value = itemlist[index].qty;
+                document.getElementById("pseller").value = itemlist[index].soldby;
+            }
+
+            const save = () => {
+                let pname = document.getElementById("pname").value;
+                let pprice = document.getElementById("price").value;
+                let pqty = document.getElementById("pqty").value;
+                let pseller = document.getElementById("pseller").value;
+
+                if(pname==""){
+                    swal("Invalid", "Invalid Item Name", "error")
+                    document.getElementById("pname").focus();
+                } else{
+
+                        let newItem = {name:pname, cost:pprice, qty:pqty, soldby:pseller};
+                        if(itemindex== -1){
+                            itemlist.push(newItem);
+                            swal("Added", "Item Save Successfully", "info");
+                        } else {
+                            itemlist[itemindex] = newItem;
+                            itemindex = -1; // set default after
+                            swal("Updated", "Item Updated Successfully", "info");
+                        }
+                        getitem(); //call to reload the list
+                        document.getElementById("pname").value = "";
+                        document.getElementById("price").value = "";
+                        document.getElementById("pqty").value = "";
+                        document.getElementById("pseller").value = "";
+                }
+
+            }
+        </script>
+    </head>
+    <body onload="getitem()">
+        <h1 align="center"> Add, List, Delete - Array of Object</h1>
+        
+        <div align="center">
+            <input type="text" id="pname" placeholder="Enter Item Name" class="smallinput"/>
+            <input type="text" id="price" placeholder="Enter Item Cost" class="smallinput"/>
+            <input type="text" id="pqty" placeholder="Enter Item Quantity" class="smallinput"/>
+            <input type="text" id="pseller" placeholder="Enter Seller Name" class="smallinput"/>
+            <button onclick="save()"> Save Item</button>
+        </div>
+
+        <br/>
+
+        <table align="center" cellpadding="10">
+            <thead>
+                <tr>
+                    <th> Item index </th>
+                    <th> Item Name </th>
+                    <th> Price </th>
+                    <th> Quantity </th>
+                    <th> Seller </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+
+            <tbody id="container"></tbody>
+
+        </table>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = (data) =>{
+                console.log(data);
+            }
+        </script>
+    </head>
+    <body onload="one('welcome to Javascript')">
+        <h1> Key board Events in javascript</h1>
+        <p> On key Press : <input type="text" value="Apple" onkeypress="one(this.value)"/> 
+            1. It take previous value 2. backspace will not work
+        </p>
+        <p> On key Down : <input type="text" value="Mango" onkeydown="one(this.value)"/> 
+            1. It take previous value 2. backspace will work
+        </p>
+
+        <p> On key Up : <input type="text" value="Banana" onkeyup="one(this.value)"/> 
+            1. It take old + new value 2. backspace will work
+        </p>
+
+        <p> On Focus : <input type="text" value="Orange" onfocus="one(this.value)"/> 
+             It take old value as curser focus in element
+        </p>
+
+        <p> On Blur : <input type="text" value="Papaya" onblur="one(this.value)"/> 
+            It take old + new value as curser move out from element
+       </p>
+    </body>
+</html>

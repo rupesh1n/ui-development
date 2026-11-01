@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = ()=>{
+                alert('Hi, Your Message Sent ....');
+            }
+
+            const two = ()=>{
+                let a = confirm("Are You Sure?");
+                alert(a); // ok => true, cancle => false
+            }
+
+            const three =() =>{
+                let a = prompt("Enter Your Email Id");
+                alert("Download Link Sent to : " + a);
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Type of popup window</h1>
+        <button onclick="one()"> Alert </button>
+        <button onclick="two()"> Confirm </button>
+        <button onclick="three()"> Prompt </button>
+    </body>
+</html>

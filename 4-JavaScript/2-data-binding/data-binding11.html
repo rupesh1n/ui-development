@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                color: blue;
+                font-size: 35px;
+                margin: 2%;
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+            }
+            body{
+                margin: 40px 10% 40px;
+            }
+            header{
+                padding: 15px;
+                text-align: center;
+            }
+            h1{
+                text-align: center;
+                color: purple;
+            }
+            div{
+                text-align: center;
+            }
+            input[type="text"]{
+                height: 33px;
+            }
+            header button{
+                padding: 6px 20px 6px;
+                color: blue;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            button:focus{
+                color: red; 
+            }
+            p button{
+                margin-top: 8px;
+            }
+        </style>
+        <script>
+            let allitem =['Apple', 'Orange'];
+            const itemlist = (keyword="") =>{
+               // alert(keyword);
+                let data ="";
+                for(let i =0; i<allitem.length; i++){
+                    let itemname = allitem[i].toLocaleLowerCase();
+
+                    if(itemname.match(keyword.toLocaleLowerCase())){
+                        data = data + "<p>" + allitem[i] + "<br/>  <button onclick=delany("+ i + ")>Delete</button> </p>";
+                        //alert(data);
+                    }
+                }
+                document.getElementById("container").innerHTML = data;
+            }
+
+            const save = () =>{
+                let newitem = document.getElementById("newitem").value;
+                allitem.unshift(newitem);// add in begning of array
+                allitem.push(newitem); // push new element at end of array
+                alert(newitem + "save Sucessfully");
+                document.getElementById("newitem").value = ""; // to clear the textbox
+                itemlist(); // reload the list after saving new item
+            }
+
+            const delfirst = () =>{
+                allitem.shift(); //it delete 1st element from array
+                itemlist();
+            }
+            const dellast = () =>{
+                allitem.pop(); //it delete 1st element from array
+                itemlist();
+            }
+            const delany = (index) =>{
+                allitem.splice(index, 1);
+                itemlist();
+            }
+        </script>
+    </head>
+    <body onload="itemlist()">
+
+        <header>
+            Enter Item Name: <input type="text" id="newitem"/>
+            <button onclick="save()">Add Item</button>
+            <button onclick="itemlist()">Show Item</button>
+            <button onclick="delfirst()">Delete 1st Item</button>
+            <button onclick="dellast()">Delete last Item</button>
+        </header>
+
+        <div>
+            Search : <input type="text" onkeyup="itemlist(this.value)"/>
+        </div>
+
+        <h1> Single Dimensional Array - Add, List, Delete </h1>
+
+        <section id="container"></section>
+    </body>
+</html>

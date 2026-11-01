@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 30px 10% 30px;
+            }
+            header{
+                padding: 30px;
+                text-align: center;
+            }
+            #container p{
+                margin: 2%;
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+                font-size: 30px;
+            }
+            h2{
+                text-align: center;
+                color: blue;
+                font-size: 50px;
+            }
+            .danger{
+                padding: 5px 15px 5px;
+                background: red;
+                color: white;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
+                display: block;
+                margin: 12px 35%;
+            }
+        </style>
+        <script>
+            class Mydata {
+                constructor(){
+                    this.allitem = ['Apple', 'Mango', 'Banana','Orange'];
+                }
+            }
+            class Showdata extends Mydata{
+                constructor(){
+                    super(); //it call constructor of parent class
+                }
+                getitem = () =>{
+                    let data = "<h2> Item List </h2>";
+                    this.allitem.map((itemname, index) =>{
+                        data = data + `<p> ${itemname} <button class='danger' onclick='obj2.delitem(${index})'> Delete </button></p>`;
+                    })
+
+                    document.getElementById("container").innerHTML = data;
+                }
+
+                save = () =>{
+                    let itemname = document.getElementById("pname").value;
+                    this.allitem.unshift(itemname); // add new element at begning of array
+                    this.getitem();
+                    document.getElementById("pname").value="";
+                }
+
+                delitem = (index) =>{
+                    this.allitem.splice(index, 1); //To delete an element from given position
+                    this.getitem(); // reload the list
+                }
+            }
+            const obj2 = new Showdata();
+        </script>
+        
+    </head>
+    <body onload="obj2.getitem()">
+        <header>
+            Enter Item Name : <input type="text" id="pname"/>
+            <button onclick="obj2.save()"> Save </button>
+            <button onclick="obj2.getitem()"> Item List </button>
+        </header>
+
+        <section id="container"></section>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let message = "<h1>Welcome to </h1> <b> JAVAScript </b> <i> Its Popular </i>";
+            const one = ()=>{
+                document.write(message);
+            }
+            const two = ()=>{
+                document.getElementById("container").innerText = message;
+            }
+            const three = ()=>{
+                document.getElementById("container").innerHTML = message;
+            }
+            const four = ()=>{
+                let city = document.getElementById("xyz").value;
+                document.getElementById("container").innerText = city;
+            }
+        </script>
+    </head>
+    <body>
+        <h1> document.write(), .innerText, .innerHTML </h1>
+        <button onclick="one()">  document.write()</button>
+        <button onclick="two()"> .innerText </button>
+        <button onclick="three()">  .innerHTML </button>
+
+        <p> Enter City Name : <input type="text"  id="xyz" value="Banglore" />
+            <button onclick="four()">  Save </button>
+        </p>
+
+        <br/><br/>
+
+        <div id="container"> No data Yet...</div>
+        <p> document : it represent the current page. from start to end</p>
+        <p> write() : It replace all contents of specific location</p>
+    </body>
+</html>

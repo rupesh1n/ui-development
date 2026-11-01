@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #mainbox{
+              display: grid; 
+              grid-template-columns: 40% 60%; 
+              width:900px;
+              margin:auto;
+              padding: 40px;
+            }
+             #box1{
+                padding: 40px;
+                margin-right: 50px;
+                border: 1px solid black;
+            }
+            #box2{ 
+                padding: 40px;
+                border: 1px solid black;
+            }
+            #container2{
+                display:grid;
+                grid-template-columns: auto auto auto;
+                text-align: center;
+        </style>
+        <script>
+            let allitem =['Apple', 'Mango', 'Bangalore'];
+            let allitem2 =['Bangalore', 'Pune', 'Delhi'];
+            const itemlist = () =>{
+                let data ="";
+                let data1 ="";
+                for(let i =0; i<allitem.length; i++){
+                    data = data + "<p>" + allitem[i] + " - " + allitem[i].length +"</p>";
+                        //alert(data);
+                }
+                for(let i =0; i<allitem2.length; i++){
+                    data1 = data1 + "<p>" + i + " <br\> " + allitem2[i] + " <br\> " + allitem2[i].length +"</p>";
+                        //alert(data);
+                }
+                document.getElementById("container").innerHTML = data;
+                document.getElementById("container2").innerHTML = data1;
+            }
+
+            const save = () =>{
+                let newitem = document.getElementById("newitem").value;
+                allitem.push(newitem); // push new element at end of array
+                itemlist(); // reload the list after saving new item
+            }
+            const save2 = () =>{
+                let newitem2 = document.getElementById("add2").value;
+                allitem2.push(newitem2); // push new element at end of array
+                itemlist(); // reload the list after saving new item
+            }
+        </script>
+    </head>
+    <body onload="itemlist()">
+        <div id="mainbox">
+            <div id="box1">
+                <input type="text" id="newitem"/>
+                <button onclick="save()">Save</button>
+            
+                <br/><br/>
+
+                <section id="container"></section>
+            </div>
+            <div id="box2">
+                <input type="text" id="add2"/>
+                <button onclick="save2()">Save</button>
+            
+                <br/><br/>
+
+                <section id="container2"></section>
+            </div>
+        </div>
+    </body>
+</html>

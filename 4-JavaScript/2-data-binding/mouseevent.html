@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const one = ()=>{
+                alert("Welcome to Java Script");
+            }
+            let i = 1;
+            const two = ()=>{
+                console.log("The Number is : " + i);
+                i++; // increased by 1
+            }
+        </script>
+    </head>
+    <body>
+        <h1> The Mouse Event in JavaScript</h1>
+        <p> The Type of User interaction with UI Called event in javascript</p>
+        <button onclick="one()"> 1 Click</button>
+        <button ondblclick="one()"> 2 Click</button>
+        <button onmousedown="one()"> Mouse Down Left Or Right Click</button>
+        <button onmouseenter="two()"> Mouse Enter</button>
+        <button onmouseout="two()"> Mouse Out</button>
+        <button onmousemove="two()"> Mouse Move</button>
+        On Change : <select onchange="two()">
+                    <option>choose</option>
+                    <option>Banglore</option>
+                    <option>Mumbai</option>
+                    <option>Chennai</option>
+        </select>
+    </body>
+</html>

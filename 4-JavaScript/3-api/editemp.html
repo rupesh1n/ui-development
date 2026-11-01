@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const saveemp = ()=>{
+                let ename = document.getElementById("ename").value;
+                let esalary = document.getElementById("esalary").value;
+                let edept = document.getElementById("edept").value;
+                let newDept = {empname:ename, salary:esalary, dept:edept};
+                
+                const myurl = new URLSearchParams(window.location.search);
+                const id = myurl.get('id');
+
+                let url = "http://localhost:1234/empapi/" + id;
+                let postdata ={
+                    headers:{'Content-Type':'application/json'},
+                    method:"put",
+                    body:JSON.stringify(newDept)
+                }
+                fetch(url, postdata)
+                .then(response=>response.json())
+                .then(empinfo=>{
+                    alert(ename + " Updated Sucessfully");
+                    window.location.href = "emplist.html";
+                })
+            }
+
+            const getempinfo = () =>{
+                const url = new URLSearchParams(window.location.search);
+                const id = url.get('id');
+               // alert( url + "\n" + window.location + "\n" + window.location.search + "\n" + id);
+               let apiurl = "http://localhost:1234/empapi/" + id;
+               fetch(apiurl)
+               .then(response=>response.json())
+               .then(emp=>{
+                    document.getElementById("ename").value = emp.empname;
+                    document.getElementById("esalary").value = emp.salary;
+                    document.getElementById("edept").value = emp.dept;
+               })
+            }
+
+            
+        </script>
+        <style>
+            a{ margin-right: 35px; font-size: 20px;}
+            table{
+                padding: 30px;
+                border: 5px dotted orange;
+            }
+        </style>
+    </head>
+    <body onload="getempinfo()">
+        <p align="center">
+            <a href="userlist.html"> Manage User </a>
+            <a href="newuser.html"> New User </a>
+            <a href="booklist.html"> Manage Book </a>
+            <a href="notebook.html"> New Book </a>
+            <a href="emplist.html"> Manage Employee </a>
+            <a href="newemp.html"> New Employee </a>
+        </p>
+        <table align="center" cellpadding="15">
+            <caption>
+                <h1> Update Employee Details</h1>
+            </caption>
+            <tr>
+                <th> Employee Name </th>
+                <td> <input type="text" id="ename" /> </td>
+            </tr>
+            <tr>
+                <th> Salary </th>
+                <td> <input type="number" id="esalary" /> </td>
+            </tr>
+            <tr>
+                <th> Department </th>
+                <td> <input type="text" id="edept" /> </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button onclick="saveemp()"> Update Employee </button>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>

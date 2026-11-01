@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const getemplist = async()=>{
+                await fetch("http://localhost:1234/empapi")
+                .then(response => response.json())
+                .then(empArray=>{
+                    let data ="";
+                    empArray.map((emp, index) =>{
+                        data = data + `<tr>
+                                    <td> ${emp.id}</td>
+                                    <td> ${emp.empname}</td>
+                                    <td> ${emp.salary}</td>
+                                    <td> ${emp.dept}</td>
+                                    <td> <a href='editemp.html?id=${emp.id}'> Edit </a> </td>
+                                    <td> <button onclick=deleteemp('${emp.id}')> Delete </button> </td>
+                                    </tr>`;
+                    })
+                    
+                    document.getElementById("container").innerHTML = data;
+                })
+            }
+            const deleteemp = (id) =>{
+               let url = "http://localhost:1234/empapi/"+id;
+               let postdata = {method:"delete"};
+               fetch(url, postdata)
+               .then(response=>response.json())
+               .then(empinfo=>{
+                alert(empinfo.ename + " - Deleted Successfully !");
+                getemplist(); // reload the list after delete
+               })
+            }
+        </script>
+        <style>
+            a{ margin-right: 35px; font-size: 20px;}
+        </style>
+    </head>
+    <body onload="getemplist()">
+        <p align="center">
+            <a href="userlist.html"> Manage User </a>
+            <a href="newuser.html"> New User </a>
+            <a href="booklist.html"> Manage Book </a>
+            <a href="notebook.html"> New Book </a>
+            <a href="emplist.html"> Manage Employee </a>
+            <a href="newemp.html"> New Employee </a>
+        </p>
+
+
+        <h1 align="center"> Manage Employee List</h1>
+        <table align="center" cellpadding="15">
+            <thead>
+                <tr>
+                    <th> Employee ID </th>
+                    <th> Employee Name </th>
+                    <th> Salary</th>
+                    <th> Department </th>
+                    <th> Edit </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+            <tbody id="container">
+                <tr>
+                    <td colspan="6" align="center"> No Records ....</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
